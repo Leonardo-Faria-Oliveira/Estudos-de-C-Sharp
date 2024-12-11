@@ -1,0 +1,126 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\leona\\source\\repos\\CRUDByBlazorTemplate\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|c:\\users\\leona\\source\\repos\\crudbyblazortemplate\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|c:\\users\\leona\\source\\repos\\crudbyblazortemplate\\components\\pages\\categorypages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|solutionrelative:components\\pages\\categorypages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|c:\\users\\leona\\source\\repos\\crudbyblazortemplate\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|solutionrelative:components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|c:\\users\\leona\\source\\repos\\crudbyblazortemplate\\components\\pages\\categorypages\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|solutionrelative:components\\pages\\categorypages\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|c:\\users\\leona\\source\\repos\\crudbyblazortemplate\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|solutionrelative:models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|c:\\users\\leona\\source\\repos\\crudbyblazortemplate\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|solutionrelative:data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 226,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.razor",
+              "DocumentMoniker": "C:\\Users\\leona\\source\\repos\\CRUDByBlazorTemplate\\Components\\Pages\\CategoryPages\\Index.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\CategoryPages\\Index.razor",
+              "ToolTip": "C:\\Users\\leona\\source\\repos\\CRUDByBlazorTemplate\\Components\\Pages\\CategoryPages\\Index.razor",
+              "RelativeToolTip": "Components\\Pages\\CategoryPages\\Index.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-11T00:50:11.916Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "C:\\Users\\leona\\source\\repos\\CRUDByBlazorTemplate\\Components\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "Components\\Layout\\NavMenu.razor",
+              "ToolTip": "C:\\Users\\leona\\source\\repos\\CRUDByBlazorTemplate\\Components\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "Components\\Layout\\NavMenu.razor",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-11T00:48:15.604Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Create.razor",
+              "DocumentMoniker": "C:\\Users\\leona\\source\\repos\\CRUDByBlazorTemplate\\Components\\Pages\\CategoryPages\\Create.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\CategoryPages\\Create.razor",
+              "ToolTip": "C:\\Users\\leona\\source\\repos\\CRUDByBlazorTemplate\\Components\\Pages\\CategoryPages\\Create.razor",
+              "RelativeToolTip": "Components\\Pages\\CategoryPages\\Create.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-11T00:46:18.264Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\source\\repos\\CRUDByBlazorTemplate\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\leona\\source\\repos\\CRUDByBlazorTemplate\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T00:32:42.104Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\source\\repos\\CRUDByBlazorTemplate\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\leona\\source\\repos\\CRUDByBlazorTemplate\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T00:30:22.154Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\source\\repos\\CRUDByBlazorTemplate\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "Models\\Category.cs",
+              "ToolTip": "C:\\Users\\leona\\source\\repos\\CRUDByBlazorTemplate\\Models\\Category.cs",
+              "RelativeToolTip": "Models\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T00:27:38.793Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
