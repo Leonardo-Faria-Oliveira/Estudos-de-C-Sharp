@@ -1,8 +1,8 @@
 ﻿@page "/categories/delete"
-@using Microsoft.EntityFrameworkCore
-@using CRUDByBlazorTemplate.Models
-@inject IDbContextFactory<CRUDByBlazorTemplate.Data.AppDbContext> DbFactory
-@inject NavigationManager NavigationManager
+@* @    using Microsoft.EntityFrameworkCore *@
+@* @    using CRUDByBlazorTemplate.Models *@
+@* @inject IDbContextFactory<AppDbContext> DbFactory *@
+@* @inject NavigationManager NavigationManager *@
 
 <PageTitle>Delete</PageTitle>
 
@@ -12,48 +12,48 @@
 <div>
     <h2>Category</h2>
     <hr />
-    @if (category is null)
-    {
-        <p><em>Loading...</em></p>
-    }
+    @* @if (category is null) *@
+    @* { *@
+    @*     <p><em>Loading...</em></p> *@
+    @* } *@
     else {
         <dl class="row">
             <dt class="col-sm-2">Title</dt>
-            <dd class="col-sm-10">@category.Title</dd>
+            @* <dd class="col-sm-10">@category.Title</dd> *@
         </dl>
         <dl class="row">
             <dt class="col-sm-2">Description</dt>
-            <dd class="col-sm-10">@category.Description</dd>
+            @* <dd class="col-sm-10">@category.Description</dd> *@
         </dl>
-        <EditForm method="post" Model="category" OnValidSubmit="DeleteCategory" FormName="delete" Enhance>
-            <button type="submit" class="btn btn-danger" disabled="@(category is null)">Delete</button> |
-            <a href="/categories">Back to List</a>
-        </EditForm>
+        @* <EditForm method="post" Model="category" OnValidSubmit="DeleteCategory" FormName="delete" Enhance> *@
+        @*     <button type="submit" class="btn btn-danger" disabled="@(category is null)">Delete</button> | *@
+        @*     <a href="/categories">Back to List</a> *@
+        @* </EditForm> *@
     }
 </div>
 
 @code {
-    private Category? category;
+    // private Category? category;
 
-    [SupplyParameterFromQuery]
-    private int Id { get; set; }
+    // [SupplyParameterFromQuery]
+    // private int Id { get; set; }
 
-    protected override async Task OnInitializedAsync()
-    {
-        using var context = DbFactory.CreateDbContext();
-        category = await context.Categories.FirstOrDefaultAsync(m => m.Id == Id);
+    // protected override async Task OnInitializedAsync()
+    // {
+    //     using var context = DbFactory.CreateDbContext();
+    //     category = await context.Categories.FirstOrDefaultAsync(m => m.Id == Id);
 
-        if (category is null)
-        {
-            NavigationManager.NavigateTo("notfound");
-        }
-    }
+    //     if (category is null)
+    //     {
+    //         NavigationManager.NavigateTo("notfound");
+    //     }
+    // }
 
-    private async Task DeleteCategory()
-    {
-        using var context = DbFactory.CreateDbContext();
-        context.Categories.Remove(category!);
-        await context.SaveChangesAsync();
-        NavigationManager.NavigateTo("/categories");
-    }
+    // private async Task DeleteCategory()
+    // {
+    //     using var context = DbFactory.CreateDbContext();
+    //     context.Categories.Remove(category!);
+    //     await context.SaveChangesAsync();
+    //     NavigationManager.NavigateTo("/categories");
+    // }
 }

@@ -1,5 +1,6 @@
 using CRUDByBlazorTemplate.Components;
-using CRUDByBlazorTemplate.Data;
+using CRUDByBlazorTemplate.Config;
+using CRUDByBlazorTemplate.Data.Context;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,6 +16,8 @@ builder.Services.AddQuickGridEntityFrameworkAdapter();
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 var app = builder.Build();
+
+builder.Services.ResolveDependecies();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

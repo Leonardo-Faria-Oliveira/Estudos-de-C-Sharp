@@ -6580,11 +6580,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\leona\\source\\repos\\CRUDByBlazorTemplate\\CRUDByBlazorTemplate.csproj",
+      "projectUniqueName": "C:\\Users\\leona\\source\\repos\\Estudos-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\CRUDByBlazorTemplate.csproj",
       "projectName": "CRUDByBlazorTemplate",
-      "projectPath": "C:\\Users\\leona\\source\\repos\\CRUDByBlazorTemplate\\CRUDByBlazorTemplate.csproj",
+      "projectPath": "C:\\Users\\leona\\source\\repos\\Estudos-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\CRUDByBlazorTemplate.csproj",
       "packagesPath": "C:\\Users\\leona\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\leona\\source\\repos\\CRUDByBlazorTemplate\\obj\\",
+      "outputPath": "C:\\Users\\leona\\source\\repos\\Estudos-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
