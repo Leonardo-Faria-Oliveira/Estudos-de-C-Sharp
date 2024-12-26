@@ -2,7 +2,7 @@
 
 namespace CRUDByBlazorTemplate.Dtos
 {
-    public class BaseDto
+    public abstract class BaseDto
     {
 
         [JsonProperty("id")]

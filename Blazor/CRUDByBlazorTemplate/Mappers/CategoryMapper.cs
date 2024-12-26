@@ -14,20 +14,22 @@ namespace CRUDByBlazorTemplate.Mappers
         public Category ToModel(CategoryDto categoryDto)
         {
         
-            return new Category(
-                categoryDto.Title,
-                categoryDto.Description
-            );
+            return new Category
+            {
+               Title = categoryDto.Title,
+               Description = categoryDto.Description
+            };
 
         }
 
         public Category ToModel(CategoryRequest categoryRequest)
         {
 
-            return new Category(
-                categoryRequest.Title,
-                categoryRequest.Description
-            );
+            return new Category
+            {
+                Title = categoryRequest.Title,
+               Description = categoryRequest.Description
+            };
 
         }
 

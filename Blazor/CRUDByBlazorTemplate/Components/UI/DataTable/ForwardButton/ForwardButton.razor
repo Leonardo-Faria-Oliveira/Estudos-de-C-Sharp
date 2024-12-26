@@ -1,0 +1,19 @@
+﻿@inject ResultPageState ResultPageState
+
+<MudIconButton Icon="@Icons.Material.Filled.ArrowForward"
+Class="d-inline me-1"
+aria-label="next"
+OnClick="@NextPage"
+Disabled="@isDisabled" 
+/>
+
+@code {
+    [Parameter]
+    public bool isDisabled { get; set; }
+
+    public void NextPage()
+    {
+        ResultPageState.Page++;
+    }
+
+}

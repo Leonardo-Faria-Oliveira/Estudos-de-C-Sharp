@@ -16,6 +16,12 @@ namespace CRUDByBlazorTemplate.Service
         private readonly ICategoryRepository _repository;
         private readonly IBaseMapper<Category, CategoryDto, CategoryByIdResponse, CategoryResponse, CategoryRequest> _mapper;
 
+        public CategoryService(ICategoryRepository repository, IBaseMapper<Category, CategoryDto, CategoryByIdResponse, CategoryResponse, CategoryRequest> categoryMapper)
+        {
+            _repository = repository;
+            _mapper = categoryMapper;
+        }
+
         public async Task<ServiceResponse> Delete(Guid id)
         {
             var category = await _repository.GetById(id);
@@ -50,7 +56,7 @@ namespace CRUDByBlazorTemplate.Service
             (
                 HttpStatusCode.OK,
                 "Categorias encontradas com sucesso",
-                categories
+                response
             );
         }
 

@@ -1,0 +1,20 @@
+﻿@inject ResultPageState ResultPageState
+
+
+<MudIconButton Icon="@Icons.Material.Filled.ArrowBack"
+aria-label="last"
+Class="d-inline m-md-1"
+OnClick="@LastPage"
+Disabled="@isDisabled" 
+/>
+
+@code {
+    [Parameter]
+    public bool isDisabled { get; set; }
+
+    public void LastPage()
+    {
+        ResultPageState.Page--;
+    }
+
+}

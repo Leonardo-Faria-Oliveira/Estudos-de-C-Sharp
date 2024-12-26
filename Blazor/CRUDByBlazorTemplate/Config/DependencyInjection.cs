@@ -1,5 +1,12 @@
 ﻿using CRUDByBlazorTemplate.Data.Context;
+using CRUDByBlazorTemplate.Dtos;
+using CRUDByBlazorTemplate.Mappers;
+using CRUDByBlazorTemplate.Models;
 using CRUDByBlazorTemplate.Repository;
+using CRUDByBlazorTemplate.Request;
+using CRUDByBlazorTemplate.Response;
+using CRUDByBlazorTemplate.Service;
+using CRUDByBlazorTemplate.Services;
 
 namespace CRUDByBlazorTemplate.Config
 {
@@ -10,9 +17,11 @@ namespace CRUDByBlazorTemplate.Config
         {
             services.AddScoped<AppDbContext>();
 
-            // Services
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
             services.AddScoped<ICategoryRepository, CategoryRepository>();
+            services.AddScoped<IBaseMapper<Category, CategoryDto, CategoryByIdResponse, CategoryResponse, CategoryRequest>, CategoryMapper>();
+            services.AddScoped<ICategoryService, CategoryService>();
+            
 
             return services;
         }

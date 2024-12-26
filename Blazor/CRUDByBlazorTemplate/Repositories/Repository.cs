@@ -22,6 +22,7 @@ namespace CRUDByBlazorTemplate.Repository
         {
            
             _context.Set<T>().Remove(entity);
+            _context.SaveChanges();
 
             return await Task.FromResult(true);
             
@@ -79,6 +80,7 @@ namespace CRUDByBlazorTemplate.Repository
         public virtual Task<T> Patch(T entity)
         {
             _context.Set<T>().Update(entity);
+            _context.SaveChanges();
 
             return Task.FromResult(entity);
         }
@@ -86,6 +88,8 @@ namespace CRUDByBlazorTemplate.Repository
         public virtual async Task<T> Post(T entity)
         {
            await _context.Set<T>().AddAsync(entity);
+            _context.SaveChanges();
+
 
            return await Task.FromResult(entity);
         }

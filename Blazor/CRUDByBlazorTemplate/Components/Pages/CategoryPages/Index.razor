@@ -1,38 +1,50 @@
 ﻿@page "/categories"
-@* @    using Microsoft.EntityFrameworkCore *@
-@* @    using Microsoft.AspNetCore.Components.QuickGrid *@
-@* @    using CRUDByBlazorTemplate.Models *@
-@* @    using CRUDByBlazorTemplate.Data; *@
-@*     using CRUDByBlazorTemplate.Data.Context *@
-@* @implements IAsyncDisposable *@
-@* @inject IDbContextFactory<AppDbContext> DbFactory *@
+@using CRUDByBlazorTemplate.Models
+@using CRUDByBlazorTemplate.Services
+@using CRUDByBlazorTemplate.Response
+@using CRUDByBlazorTemplate.Dtos
+@inject ResultPageState ResultPageState
+@using CRUDByBlazorTemplate.Components.UI.DataTable
+@inject ICategoryService _categoryService
+@attribute [StreamRendering]
+@rendermode InteractiveServer
 
-<PageTitle>Index</PageTitle>
+<PageTitle>Categorias</PageTitle>
 
-<h1>Index</h1>
+<h1>Listagem de categorias</h1>
 
-<p>
-    <a href="categories/create">Create New</a>
-</p>
+<DataTable T=CategoryDto DataTableVM="@(new ViewModel<CategoryDto>(Headers, Categories, Total, Take, ResultPageState, Search, Response))" />
 
-<QuickGrid Class="table" Items="context.Categories">
-    <PropertyColumn Property="category => category.Title" />
-    <PropertyColumn Property="category => category.Description" />
+@code
+{
 
-    <TemplateColumn Context="category">
-        @* <a href="@($"categories/edit?id={category.Id}")">Edit</a> | *@
-        @* <a href="@($"categories/details?id={category.Id}")">Details</a> | *@
-        @* <a href="@($"categories/delete?id={category.Id}")">Delete</a> *@
-    </TemplateColumn>
-</QuickGrid>
+    private List<CategoryDto>? Categories = new List<CategoryDto>();
 
-@code {
-    // private AppDbContext context = default!;
+    private List<(string Header, string PropName)> Headers = new List<(string Header, string PropName)>
+    {
+        ("Título", "Title"),
+        ("Descrição", "Description")
+    };
 
-    // protected override void OnInitialized()
-    // {
-    //     context = DbFactory.CreateDbContext();
-    // }
 
-    // public async ValueTask DisposeAsync() => await context.DisposeAsync();
+    private int Total;
+
+    private int Take = 10;
+
+    private string? Search;
+
+    private CategoryResponse Response;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var res = await _categoryService.Get(Take, (ResultPageState.Page - 1) * Take, Search);
+
+        Response = (CategoryResponse)res.Content;
+
+        Categories = Response.CategoryDtos;
+
+        Total = Response.Total;
+    }
+
+
 }
