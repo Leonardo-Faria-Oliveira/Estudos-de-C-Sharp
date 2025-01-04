@@ -4,7 +4,7 @@ namespace CRUDByBlazorTemplate.Services
 {
     public interface IBaseService<T, J> where T : class
     {
-        public Task<T> Get(int skip, int take, string? search);
+        public Task<T> Get(int take, int skip, string? search);
 
         public Task<T> GetById(Guid Id);
 

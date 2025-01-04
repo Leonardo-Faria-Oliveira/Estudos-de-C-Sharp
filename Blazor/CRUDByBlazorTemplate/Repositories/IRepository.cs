@@ -6,7 +6,7 @@ namespace CRUDByBlazorTemplate.Repository
     public interface IRepository<T> where T : class
     {
 
-        public Task<Pagination<T>> Get(int skip, int take, string? search, IQueryable<T>? customQuery);
+        public Task<Pagination<T>> Get(int take, int skip, string? search, IQueryable<T>? customQuery);
 
         public Task<T> GetById(Guid Id, Expression<Func<T, object>>[] includes);
 

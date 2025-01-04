@@ -28,27 +28,27 @@ namespace CRUDByBlazorTemplate.Repository
             
         }
 
-        public virtual Task<Pagination<T>> Get(int skip, int take, string? search, IQueryable<T>? customQuery)
+        public virtual Task<Pagination<T>> Get(int take, int skip, string? search, IQueryable<T>? customQuery)
         {
 
             var query = _context.Set<T>().AsQueryable();
 
-            if(customQuery != null)
+            var count = query.AsNoTracking().Count();
+
+            if (customQuery != null)
             {
                 query = customQuery;
             }
             
             if(skip > 0)
             {
-                query.Skip(skip);
+                query = query.Skip(skip);
             }
 
             if(take > 0)
             {
-                query.Take(take);
+                query = query.Take(take);
             }
-
-            var count = query.AsNoTracking().Count();
 
             if(!string.IsNullOrEmpty(search))
             {

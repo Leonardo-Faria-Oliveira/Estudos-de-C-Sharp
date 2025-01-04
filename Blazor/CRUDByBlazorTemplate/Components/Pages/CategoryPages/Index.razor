@@ -3,7 +3,6 @@
 @using CRUDByBlazorTemplate.Services
 @using CRUDByBlazorTemplate.Response
 @using CRUDByBlazorTemplate.Dtos
-@inject ResultPageState ResultPageState
 @using CRUDByBlazorTemplate.Components.UI.DataTable
 @inject ICategoryService _categoryService
 @attribute [StreamRendering]
@@ -13,7 +12,11 @@
 
 <h1>Listagem de categorias</h1>
 
-<DataTable T=CategoryDto DataTableVM="@(new ViewModel<CategoryDto>(Headers, Categories, Total, Take, ResultPageState, Search, Response))" />
+<DataTable 
+T=CategoryDto 
+DataTableVM="@(new ViewModel<CategoryDto>(Headers, Categories, Total, Take, Page, Search, Response))"   
+GetData="GetCategories"
+/>
 
 @code
 {
@@ -23,7 +26,9 @@
     private List<(string Header, string PropName)> Headers = new List<(string Header, string PropName)>
     {
         ("Título", "Title"),
-        ("Descrição", "Description")
+        ("Descrição", "Description"),
+        ("Criado em", "CreatedAt"),
+        ("Ultima atualização", "UpdatedAt")
     };
 
 
@@ -31,20 +36,27 @@
 
     private int Take = 10;
 
+    private int Page = 1;
+
     private string? Search;
 
     private CategoryResponse Response;
 
-    protected override async Task OnInitializedAsync()
+    public async Task<GridData<CategoryDto>> GetCategories(int Page=1)
     {
-        var res = await _categoryService.Get(Take, (ResultPageState.Page - 1) * Take, Search);
+        var res = await _categoryService.Get(Take, (Page - 1) * Take, Search);
 
         Response = (CategoryResponse)res.Content;
 
         Categories = Response.CategoryDtos;
 
         Total = Response.Total;
-    }
 
+        return new GridData<CategoryDto>
+            {
+                Items = Categories,
+                TotalItems = Total
+            };
+    }
 
 }

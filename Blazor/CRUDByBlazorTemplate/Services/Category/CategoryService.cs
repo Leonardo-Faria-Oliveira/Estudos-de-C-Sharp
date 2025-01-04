@@ -46,9 +46,9 @@ namespace CRUDByBlazorTemplate.Service
             );
         }
 
-        public async Task<ServiceResponse> Get(int skip, int take, string? search)
+        public async Task<ServiceResponse> Get(int take, int skip, string? search)
         {
-            var categories = await _repository.Get(skip, take, search);
+            var categories = await _repository.Get(take, skip, search);
 
             var response = _mapper.ToResponse(categories);
 

@@ -1,86 +1,23 @@
 ﻿@using CRUDByBlazorTemplate.Dtos
-@using CRUDByBlazorTemplate.Components.UI.DataTable.BackButton
-@using CRUDByBlazorTemplate.Components.UI.DataTable.ForwardButton
 @using System.Reflection
-@inject ResultPageState ResultPageState
-
+@implements IDisposable
 
 @typeparam T where T : BaseDto
 
-
-@* @code { *@
-@*     private IEnumerable<Element> Elements = new List<Element>(); *@
-@*     private string _searchString; *@
-@*     private bool _sortNameByLength; *@
-@*     private List<string> _events = new(); *@
-@*     // custom sort by name length *@
-@*     private Func<Element, object> _sortBy => x => *@
-@*     { *@
-@*         if (_sortNameByLength) *@
-@*             return x.Name.Length; *@
-@*         else *@
-@*             return x.Name; *@
-@*     }; *@
-@*     // quick filter - filter globally across multiple columns with the same input *@
-@*     private Func<Element, bool> _quickFilter => x => *@
-@*     { *@
-@*         if (string.IsNullOrWhiteSpace(_searchString)) *@
-@*             return true; *@
-
-@*         if (x.Sign.Contains(_searchString, StringComparison.OrdinalIgnoreCase)) *@
-@*             return true; *@
-
-@*         if (x.Name.Contains(_searchString, StringComparison.OrdinalIgnoreCase)) *@
-@*             return true; *@
-
-@*         if ($"{x.Number} {x.Position} {x.Molar}".Contains(_searchString)) *@
-@*             return true; *@
-
-@*         return false; *@
-@*     }; *@
-
-@*     protected override async Task OnInitializedAsync() *@
-@*     { *@
-@*         Elements = await httpClient.GetFromJsonAsync<List<Element>>("webapi/periodictable"); *@
-@*     } *@
-
-@*     // events *@
-@*     void RowClicked(DataGridRowClickEventArgs<Element> args) *@
-@*     { *@
-@*         _events.Insert(0, $"Event = RowClick, Index = {args.RowIndex}, Data = {System.Text.Json.JsonSerializer.Serialize(args.Item)}"); *@
-@*     } *@
-
-@*     void RowRightClicked(DataGridRowClickEventArgs<Element> args) *@
-@*     { *@
-@*         _events.Insert(0, $"Event = RowRightClick, Index = {args.RowIndex}, Data = {System.Text.Json.JsonSerializer.Serialize(args.Item)}"); *@
-@*     } *@
-
-@*     void SelectedItemsChanged(HashSet<Element> items) *@
-@*     { *@
-@*         _events.Insert(0, $"Event = SelectedItemsChanged, Data = {System.Text.Json.JsonSerializer.Serialize(items)}"); *@
-@*     } *@
-@* } *@
-
-
-
- <MudDataGrid
-  T="T"    
-  Items="@DataTableVM.Itens"
-  Filterable="false" 
-  > 
-    <ToolBarContent> 
-         <MudTextField  
-        Placeholder="Busque um registro" 
-        Adornment="Adornment.Start"  
-         Immediate="true"  
-          AdornmentIcon="@Icons.Material.Filled.Search"  
-       IconSize="Size.Medium"  
-        Class="mt-0" 
-         /> 
-    </ToolBarContent> 
+<MudDataGrid T="T"
+             Filterable="false"
+             Virtualize="true"
+             ServerData="OnLoad">
+    <ToolBarContent>
+        <MudTextField Placeholder="Busque um registro"
+        Adornment="Adornment.Start"
+        Immediate="true"
+        AdornmentIcon="@Icons.Material.Filled.Search"
+        IconSize="Size.Medium"
+        Class="mt-0" />
+    </ToolBarContent>
 
     <Columns>
-
         @if (DataTableVM.Itens != null)
         {
             foreach (var header in DataTableVM.Headers)
@@ -98,18 +35,48 @@
         }
     </Columns>
 
+    <NoRecordsContent>
+        Nenhum registro encontrado
+    </NoRecordsContent>
 
-
-    <PagerContent> 
-        <MudDataGridPager T="T"></MudDataGridPager> 
-    </PagerContent> 
+    <PagerContent>
+        <MudDataGridPager 
+        ShowPageNumber="true"
+        PageSizeSelector="false"
+        ShowNavigation="true">
+        </MudDataGridPager>
+    </PagerContent>
 
 </MudDataGrid>
 
-
 @code {
+
+    private bool _isDisposed;
 
     [Parameter]
     public ViewModel<T> DataTableVM { get; set; } = default;
 
+    [Parameter]
+    public Func<int, Task<GridData<T>>> GetData { get; set; }
+
+    protected override void OnInitialized()
+    {
+        _isDisposed = false;
+    }
+
+    public async Task<GridData<T>> OnLoad(GridState<T> state)
+    {
+        if (_isDisposed)
+        {
+            return new GridData<T>();
+        }
+
+        return await GetData(state.Page); 
+       
+    }
+
+    public void Dispose()
+    {
+        _isDisposed = true;
+    }
 }

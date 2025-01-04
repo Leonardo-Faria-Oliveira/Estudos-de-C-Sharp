@@ -6,13 +6,13 @@ namespace CRUDByBlazorTemplate.Components.UI.DataTable
     public class ViewModel<T> where T : class
     {
 
-        public ViewModel(List<(string Header, string PropName)> headers,  List<T>? itens, int total, int take, ResultPageState resultPage, string? search, object? response) 
+        public ViewModel(List<(string Header, string PropName)> headers,  List<T>? itens, int total, int take, int page, string? search, object? response) 
         {
             Headers = headers;
             Itens = itens;
             Total = total;
             Take = take;
-            ResultPage = resultPage;
+            Page = page;
             Search = search;
             Response = response;
         }
@@ -25,7 +25,7 @@ namespace CRUDByBlazorTemplate.Components.UI.DataTable
 
         public int Take { get; set; }
 
-        public ResultPageState ResultPage { get; set; }
+        public int Page { get; set; }
 
         public string? Search { get; set; }
 

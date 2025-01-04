@@ -20,13 +20,13 @@ builder.Services.AddQuickGridEntityFrameworkAdapter();
 builder.Services.AddServerSideBlazor();
 
 builder.Services.AddMudServices();
+builder.Services.AddMudServices(options => { options.PopoverOptions.CheckForPopoverProvider = false; });
+
 
 builder.Services.AddControllers();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
-builder.Services.AddScoped<ResultPageState>();
 
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 

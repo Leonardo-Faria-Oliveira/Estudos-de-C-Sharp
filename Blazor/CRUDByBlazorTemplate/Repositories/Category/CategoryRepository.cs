@@ -20,7 +20,7 @@ namespace CRUDByBlazorTemplate.Repository
 
         }
 
-        public Task<Pagination<Category>> Get(int skip, int take, string? search)
+        public Task<Pagination<Category>> Get(int take, int skip, string? search)
         {
 
             var query = context.Categories.AsQueryable();
@@ -28,7 +28,7 @@ namespace CRUDByBlazorTemplate.Repository
             query.Include(c => c.Title);
             query.Include(c => c.Description);
 
-            return base.Get(skip, take, search, query);
+            return base.Get(take, skip, search, query);
         }
 
     }

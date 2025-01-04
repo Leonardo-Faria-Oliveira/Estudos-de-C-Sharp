@@ -7,6 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Components\UI\DataTable\BackButton\**" />
+    <Compile Remove="Components\UI\DataTable\ForwardButton\**" />
+    <Content Remove="Components\UI\DataTable\BackButton\**" />
+    <Content Remove="Components\UI\DataTable\ForwardButton\**" />
+    <EmbeddedResource Remove="Components\UI\DataTable\BackButton\**" />
+    <EmbeddedResource Remove="Components\UI\DataTable\ForwardButton\**" />
+    <None Remove="Components\UI\DataTable\BackButton\**" />
+    <None Remove="Components\UI\DataTable\ForwardButton\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Remove="Dtos\IBaseDto.cs" />
   </ItemGroup>
 
