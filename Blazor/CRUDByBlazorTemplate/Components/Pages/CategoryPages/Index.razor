@@ -44,7 +44,9 @@ GetData="GetCategories"
 
     public async Task<GridData<CategoryDto>> GetCategories(int Page=1)
     {
-        var res = await _categoryService.Get(Take, (Page - 1) * Take, Search);
+
+        Console.WriteLine(Page);
+        var res = await _categoryService.Get(Take, Page * Take, Search);
 
         Response = (CategoryResponse)res.Content;
 
