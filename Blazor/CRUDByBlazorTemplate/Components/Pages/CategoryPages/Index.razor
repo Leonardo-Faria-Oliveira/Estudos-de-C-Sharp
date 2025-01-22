@@ -10,13 +10,36 @@
 
 <PageTitle>Categorias</PageTitle>
 
-<h1>Listagem de categorias</h1>
+<MudContainer 
+Class ="gap-12 d-flex flex-column justify-content-around h-auto"
+MaxWidth="MaxWidth.Large"
+>
+    
+    <MudText Typo="Typo.h4">Listagem de categorias</MudText>
+        
+    <div class="gap-3 d-flex flex-column justify-content-around h-auto">
 
-<DataTable 
-T=CategoryDto 
-DataTableVM="@(new ViewModel<CategoryDto>(Headers, Categories, Total, Take, Page, Search, Response))"   
-GetData="GetCategories"
-/>
+        <div class="d-flex flex-row justify-content-end">
+            <MudButton Href="/categories/create"
+                       Variant="Variant.Filled"
+                       Class=" max-w-25"
+                       Target="_blank"
+                       DropShadow="true"
+                       EndIcon="@Icons.Material.Sharp.Add"
+                       Color="Color.Primary">
+                Nova categoria
+            </MudButton>
+        </div>
+       
+
+
+        <DataTable T=CategoryDto
+                   DataTableVM="@(new ViewModel<CategoryDto>(Headers, Categories, Total, Take, Page, Search, Response))"
+                   GetData="GetCategories" />
+    </div>
+    
+
+</MudContainer>
 
 @code
 {
@@ -45,7 +68,6 @@ GetData="GetCategories"
     public async Task<GridData<CategoryDto>> GetCategories(int Page=1)
     {
 
-        Console.WriteLine(Page);
         var res = await _categoryService.Get(Take, Page * Take, Search);
 
         Response = (CategoryResponse)res.Content;

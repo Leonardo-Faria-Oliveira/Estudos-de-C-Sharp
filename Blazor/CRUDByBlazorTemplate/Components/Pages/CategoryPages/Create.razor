@@ -1,49 +1,55 @@
 ﻿@page "/categories/create"
-@* @    using Microsoft.EntityFrameworkCore *@
-@* @    using CRUDByBlazorTemplate.Models *@
-@* @inject IDbContextFactory<AppDbContext> DbFactory *@
-@* @inject NavigationManager NavigationManager *@
+@using System.Text.RegularExpressions
+@using System.ComponentModel.DataAnnotations
 
-<PageTitle>Create</PageTitle>
+@inject NavigationManager NavigationManager 
 
-<h1>Create</h1>
+<PageTitle>Categorias</PageTitle>
 
-<h2>Category</h2>
-<hr />
-@* <div class="row"> *@
-@*     <div class="col-md-4"> *@
-@*         <EditForm method="post" Model="Category" OnValidSubmit="AddCategory" FormName="create" Enhance> *@
-@*             <DataAnnotationsValidator /> *@
-@*             <ValidationSummary class="text-danger" role="alert"/> *@
-@*             <div class="mb-3"> *@
-@*                 <label for="title" class="form-label">Title:</label>  *@
-@*                 <InputText id="title" @bind-Value="Category.Title" class="form-control" />  *@
-@*                 <ValidationMessage For="() => Category.Title" class="text-danger" />  *@
-@*             </div>         *@
-@*             <div class="mb-3"> *@
-@*                 <label for="description" class="form-label">Description:</label>  *@
-@*                 <InputText id="description" @bind-Value="Category.Description" class="form-control" />  *@
-@*                 <ValidationMessage For="() => Category.Description" class="text-danger" />  *@
-@*             </div>         *@
-@*             <button type="submit" class="btn btn-primary">Create</button> *@
-@*         </EditForm> *@
-@*     </div> *@
-@* </div> *@
+<MudContainer 
+Class ="gap-12 d-flex flex-column justify-content-around h-auto"
+MaxWidth="MaxWidth.Large"
+>
+    
+    <MudText Typo="Typo.h4">Cadastro de categorias</MudText>
 
-<div>
-    <a href="/categories">Back to List</a>
-</div>
+    <MudGrid>
+        <MudItem xs="12" sm="7">
+            <MudPaper Class="pa-4">
+                <MudForm @ref="form" @bind-IsValid="@success" @bind-Errors="@errors">
+                    <MudTextField  
+                    Variant="Variant.Outlined" 
+                    T="string" Label="Título" 
+                    Required="true" 
+                    RequiredError="O título é obrigatório!" 
+                    />
+                    
+                    <MudTextField  
+                    T="string" 
+                    Label="Descrição"
+                    Variant="Variant.Outlined"
+                    Required="true" 
+                    Lines="5"
+                    RequiredError="A descrição é obrigatório!" 
+                    />
+                </MudForm>
+
+                <MudButton Variant="Variant.Filled" Color="Color.Primary" DropShadow="false" OnClick="@(()=>form.Validate())">ENVIAR</MudButton>
+            </MudPaper>
+            
+        </MudItem>
+        
+    </MudGrid>
+
+</MudContainer>
 
 @code {
-    // [SupplyParameterFromForm]
-    // private Category Category { get; set; } = new();
 
-    // To protect from overposting attacks, see https://learn.microsoft.com/aspnet/core/blazor/forms/#mitigate-overposting-attacks.
-    // private async Task AddCategory()
-    // {
-    //     using var context = DbFactory.CreateDbContext();
-    //     context.Categories.Add(Category);
-    //     await context.SaveChangesAsync();
-    //     NavigationManager.NavigateTo("/categories");
-    // }
+    bool success;
+    string[] errors = { };
+    MudForm form;
+
+    
+
 }
+
