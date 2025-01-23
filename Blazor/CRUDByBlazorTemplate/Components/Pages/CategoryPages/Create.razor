@@ -1,8 +1,17 @@
 ﻿@page "/categories/create"
 @using System.Text.RegularExpressions
 @using System.ComponentModel.DataAnnotations
-
+@using CRUDByBlazorTemplate.Models
+@using CRUDByBlazorTemplate.Services
+@using CRUDByBlazorTemplate.Request
+@using CRUDByBlazorTemplate.Response
+@using CRUDByBlazorTemplate.Dtos
+@inject ICategoryService _categoryService
+@attribute [StreamRendering]
+@rendermode InteractiveServer
 @inject NavigationManager NavigationManager 
+@inject ISnackbar Snackbar
+
 
 <PageTitle>Categorias</PageTitle>
 
@@ -10,21 +19,28 @@
 Class ="gap-12 d-flex flex-column justify-content-around h-auto"
 MaxWidth="MaxWidth.Large"
 >
-    
+
     <MudText Typo="Typo.h4">Cadastro de categorias</MudText>
 
     <MudGrid>
         <MudItem xs="12" sm="7">
             <MudPaper Class="pa-4">
-                <MudForm @ref="form" @bind-IsValid="@success" @bind-Errors="@errors">
-                    <MudTextField  
+                <MudForm 
+                Model="category"
+                @ref="form" 
+
+                >
+                    <MudTextField 
+                    @bind-Value="title"
                     Variant="Variant.Outlined" 
-                    T="string" Label="Título" 
+                    T="string" 
+                    Label="Título" 
                     Required="true" 
                     RequiredError="O título é obrigatório!" 
                     />
-                    
-                    <MudTextField  
+
+                    <MudTextField 
+                    @bind-Value="description"
                     T="string" 
                     Label="Descrição"
                     Variant="Variant.Outlined"
@@ -34,22 +50,80 @@ MaxWidth="MaxWidth.Large"
                     />
                 </MudForm>
 
-                <MudButton Variant="Variant.Filled" Color="Color.Primary" DropShadow="false" OnClick="@(()=>form.Validate())">ENVIAR</MudButton>
+                <MudButton 
+                Disabled="@_processing"
+                Variant="Variant.Filled" 
+                Color="Color.Primary" 
+                DropShadow="false"
+                OnClick="@(async () => await SaveCategory())" 
+                >
+                    @if (_processing)
+                    {
+                        <MudProgressCircular Class="ms-n1" Size="Size.Small" Indeterminate="true" />
+                        <MudText Class="ms-2 text-uppercase">Processando</MudText>
+                    }else{
+                        <MudText Class="text-uppercase" >Enviar</MudText>
+                    }
+                </MudButton>
             </MudPaper>
-            
+
         </MudItem>
-        
+
     </MudGrid>
 
 </MudContainer>
 
 @code {
 
-    bool success;
-    string[] errors = { };
     MudForm form;
+    Category category;
+    string title = string.Empty;
+    private bool _processing = false;
+    string description;
 
-    
+    public async Task<object> SaveCategory(){
+
+        await form.Validate();
+        _processing = true;
+
+        var categoryRequest = new CategoryRequest {
+            Title = title,
+            Description = description
+        };
+        var res = await _categoryService.Post(categoryRequest);
+
+        Snackbar.Configuration.PositionClass = Defaults.Classes.Position.BottomStart;
+
+
+        await Task.Delay(400);
+        _processing = false;
+
+        if(res.StatusCode == System.Net.HttpStatusCode.OK){
+
+            
+            Snackbar.Add("Sucesso", Severity.Success, (options) =>
+            {
+                options.CloseAfterNavigation = true;
+            });
+            await Task.Delay(400);
+            NavigationManager.NavigateTo("/categories");
+
+
+        }else {
+
+            Snackbar.Add(res.Message, Severity.Error, (options) =>
+            {
+                options.CloseAfterNavigation = true;
+            });
+
+        }
+
+        StateHasChanged();
+
+        return res.Content;
+
+        
+    } 
 
 }
 

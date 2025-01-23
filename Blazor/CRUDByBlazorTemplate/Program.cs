@@ -3,6 +3,7 @@ using CRUDByBlazorTemplate.Components.UI.DataTable;
 using CRUDByBlazorTemplate.Config;
 using CRUDByBlazorTemplate.Data.Context;
 using Microsoft.EntityFrameworkCore;
+using MudBlazor;
 using MudBlazor.Services;
 
 
@@ -19,11 +20,18 @@ builder.Services.AddQuickGridEntityFrameworkAdapter();
 
 builder.Services.AddServerSideBlazor();
 
+builder.Services.AddMudBlazorSnackbar();
+
 builder.Services.AddMudServices();
-builder.Services.AddMudServices(options => { options.PopoverOptions.CheckForPopoverProvider = false; });
+builder.Services.AddMudServices(options => { 
+    options.PopoverOptions.CheckForPopoverProvider = false;
+
+
+});
 
 
 builder.Services.AddControllers();
+
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
