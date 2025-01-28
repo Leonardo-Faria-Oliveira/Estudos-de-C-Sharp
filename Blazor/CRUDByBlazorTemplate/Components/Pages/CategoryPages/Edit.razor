@@ -1,41 +1,69 @@
-﻿@page "/categories/edit"
-@* @    using Microsoft.EntityFrameworkCore *@
-@* @    using CRUDByBlazorTemplate.Models *@
-@* @inject IDbContextFactory<AppDbContext> DbFactory *@
-@* @inject NavigationManager NavigationManager *@
+﻿@page "/categories/edit/{Id}"
+@using System.Text.RegularExpressions
+@using System.ComponentModel.DataAnnotations
+@using CRUDByBlazorTemplate.Models
+@using CRUDByBlazorTemplate.Services
+@using CRUDByBlazorTemplate.Request
+@using CRUDByBlazorTemplate.Response
+@using CRUDByBlazorTemplate.Dtos
+@inject ICategoryService _categoryService
+@attribute [StreamRendering]
+@rendermode InteractiveServer
+@inject NavigationManager NavigationManager
+@inject ISnackbar Snackbar
 
-<PageTitle>Edit</PageTitle>
 
-<h1>Edit</h1>
+<PageTitle>Categorias</PageTitle>
 
-<h2>Category</h2>
-<hr />
-@* @if (Category is null) *@
-@* { *@
-@*     <p><em>Loading...</em></p> *@
-@* } *@
-else
-{
-    @* <div class="row"> *@
-    @*     <div class="col-md-4"> *@
-    @*         <EditForm method="post" Model="Category" OnValidSubmit="UpdateCategory" FormName="edit" Enhance> *@
-    @*             <DataAnnotationsValidator /> *@
-    @*             <ValidationSummary role="alert"/> *@
-    @*             <input type="hidden" name="Category.Id" value="@Category.Id" /> *@
-    @*             <div class="mb-3"> *@
-    @*                 <label for="title" class="form-label">Title:</label> *@
-    @*                 <InputText id="title" @bind-Value="Category.Title" class="form-control" /> *@
-    @*                 <ValidationMessage For="() => Category.Title" class="text-danger" /> *@
-    @*             </div> *@
-    @*             <div class="mb-3"> *@
-    @*                 <label for="description" class="form-label">Description:</label> *@
-    @*                 <InputText id="description" @bind-Value="Category.Description" class="form-control" /> *@
-    @*                 <ValidationMessage For="() => Category.Description" class="text-danger" /> *@
-    @*             </div> *@
-    @*             <button type="submit" class="btn btn-primary">Save</button> *@
-    @*         </EditForm> *@
-    @*     </div> *@
-    @* </div> *@
+<MudContainer Class="gap-12 d-flex flex-column justify-content-around h-auto"
+              MaxWidth="MaxWidth.Large">
+
+    <MudText Typo="Typo.h4">Editar categorias</MudText>
+
+    <MudGrid>
+        <MudItem xs="12" sm="7">
+            <MudPaper Class="pa-4">
+                <MudForm Model="category"
+                         @ref="form">
+                    <MudTextField @bind-Value="title"
+                                  Variant="Variant.Outlined"
+                                  T="string"
+                                  Label="Título"
+                                  Required="true"
+                                  RequiredError="O título é obrigatório!" />
+
+                    <MudTextField @bind-Value="description"
+                                  T="string"
+                                  Label="Descrição"
+                                  Variant="Variant.Outlined"
+                                  Required="true"
+                                  Lines="5"
+                                  RequiredError="A descrição é obrigatório!" />
+                </MudForm>
+
+                <MudButton Disabled="@_processing"
+                           Variant="Variant.Filled"
+                           Color="Color.Primary"
+                           DropShadow="false"
+                           OnClick="@(async () => await SaveCategory())">
+                    @if (_processing)
+                    {
+                        <MudProgressCircular Class="ms-n1" Size="Size.Small" Indeterminate="true" />
+                        <MudText Class="ms-2 text-uppercase">Processando</MudText>
+                    }
+                    else
+                    {
+                        <MudText Class="text-uppercase">Enviar</MudText>
+                    }
+                </MudButton>
+            </MudPaper>
+
+        </MudItem>
+
+    </MudGrid>
+
+</MudContainer>
+
 }
 
 <div>
@@ -43,52 +71,90 @@ else
 </div>
 
 @code {
-    // [SupplyParameterFromQuery]
-    // private int Id { get; set; }
 
-    // [SupplyParameterFromForm]
-    // private Category? Category { get; set; }
+    [Parameter]
+    public string Id { get; set; }
 
-    // protected override async Task OnInitializedAsync()
-    // {
-    //     using var context = DbFactory.CreateDbContext();
-    //     Category ??= await context.Categories.FirstOrDefaultAsync(m => m.Id == Id);
+    MudForm form;
+    Category category;
+    string title = string.Empty;
+    private bool _processing = false;
+    string description;
 
-    //     if (Category is null)
-    //     {
-    //         NavigationManager.NavigateTo("notfound");
-    //     }
-    // }
 
-    // To protect from overposting attacks, enable the specific properties you want to bind to.
-    // For more information, see https:learn.microsoft.com/aspnet/core/blazor/forms/#mitigate-overposting-attacks.
-    // private async Task UpdateCategory()
-    // {
-    //     using var context = DbFactory.CreateDbContext();
-    //     context.Attach(Category!).State = EntityState.Modified;
 
-    //     try
-    //     {
-    //         await context.SaveChangesAsync();
-    //     }
-    //     catch (DbUpdateConcurrencyException)
-    //     {
-    //         if (!CategoryExists(Category!.Id))
-    //         {
-    //             NavigationManager.NavigateTo("notfound");
-    //         }
-    //         else
-    //         {
-    //             throw;
-    //         }
-    //     }
+    private bool _isDisposed;
 
-    //     NavigationManager.NavigateTo("/categories");
-    // }
+    protected override async Task OnInitializedAsync()
+    {
+        await OnLoad();
+    }
 
-    // private bool CategoryExists(int id)
-    // {
-    //     using var context = DbFactory.CreateDbContext();
-    //     return context.Categories.Any(e => e.Id == id);
-    // }
+    public async Task<CategoryByIdResponse> GetCategoryById(Guid id)
+    {
+        var response = await _categoryService.GetById(id);
+
+        return (CategoryByIdResponse)response.Content;
+
+    }
+
+    public async Task OnLoad()
+    {
+
+        var categoryResponse = await GetCategoryById(Guid.Parse(Id));
+
+        title = categoryResponse.CategoryDto.Title;
+        description = categoryResponse.CategoryDto.Description;
+
+    }
+
+    public async Task<object> SaveCategory()
+    {
+
+        await form.Validate();
+        _processing = true;
+
+        var categoryRequest = new CategoryRequest
+            {
+                Title = title,
+                Description = description
+            };
+        var res = await _categoryService.Post(categoryRequest);
+
+        Snackbar.Configuration.PositionClass = Defaults.Classes.Position.BottomStart;
+
+
+        await Task.Delay(400);
+        _processing = false;
+
+        if (res.StatusCode == System.Net.HttpStatusCode.OK)
+        {
+
+
+            Snackbar.Add("Sucesso", Severity.Success, (options) =>
+            {
+                options.CloseAfterNavigation = true;
+            });
+            await Task.Delay(400);
+            NavigationManager.NavigateTo("/categories");
+
+
+        }
+        else
+        {
+
+            Snackbar.Add(res.Message, Severity.Error, (options) =>
+            {
+                options.CloseAfterNavigation = true;
+            });
+
+        }
+
+        StateHasChanged();
+
+        return res.Content;
+
+
+    }
+
 }

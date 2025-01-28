@@ -26,12 +26,31 @@
 
                 if (prop != null)
                 {
-                    <PropertyColumn T="T" TProperty="object"
-                    Title="@header.Header"
-                    Property="@(item => prop.GetValue(item))" 
-                    />
+
+                    if(header.PropName.Equals("Id")){
+                        <TemplateColumn>
+                            <CellTemplate>
+                                <MudStack Row>
+                                    <MudIconButton OnClick="@(() => Navigate((Guid)context.Item.Id))"
+                                    Icon="@Icons.Material.Outlined.Edit" Color="Color.Warning" Size="@Size.Small" />
+                                    <MudIconButton Icon="@Icons.Material.Outlined.Delete" Color="Color.Error" Size="@Size.Small" />
+                                </MudStack>
+                            </CellTemplate>
+                        </TemplateColumn>
+                    }else{
+                        <PropertyColumn T="T"
+                        TProperty="object"
+                        Sortable="false"
+                        Filterable="false"
+                        Title="@header.Header"
+                        Property="@(item => prop.GetValue(item))" />
+                    }
+
                 }
+
             }
+
+
         }
     </Columns>
 
@@ -59,6 +78,9 @@
     [Parameter]
     public Func<int, Task<GridData<T>>> GetData { get; set; }
 
+    [Parameter]
+    public Func<Guid, Task> NavigateToEdit { get; set; }
+
     protected override void OnInitialized()
     {
         _isDisposed = false;
@@ -72,7 +94,12 @@
         }
 
         return await GetData(state.Page); 
-       
+
+    }
+
+    public void Navigate(Guid id)
+    {
+        NavigateToEdit(id);
     }
 
     public void Dispose()

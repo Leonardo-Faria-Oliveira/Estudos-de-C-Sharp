@@ -5,6 +5,7 @@
 @using CRUDByBlazorTemplate.Dtos
 @using CRUDByBlazorTemplate.Components.UI.DataTable
 @inject ICategoryService _categoryService
+@inject NavigationManager NavigationManager
 @attribute [StreamRendering]
 @rendermode InteractiveServer
 
@@ -33,7 +34,9 @@ MaxWidth="MaxWidth.Large"
 
         <DataTable T=CategoryDto
                    DataTableVM="@(new ViewModel<CategoryDto>(Headers, Categories, Total, Take, Page, Search, Response))"
-                   GetData="GetCategories" />
+                   GetData="GetCategories" 
+                   NavigateToEdit="NavigateToEdit"
+                   />
     </div>
     
 
@@ -49,7 +52,8 @@ MaxWidth="MaxWidth.Large"
         ("Título", "Title"),
         ("Descrição", "Description"),
         ("Criado em", "CreatedAt"),
-        ("Ultima atualização", "UpdatedAt")
+        ("Ultima atualização", "UpdatedAt"),
+        ("Ações", "Id")
     };
 
 
@@ -79,6 +83,12 @@ MaxWidth="MaxWidth.Large"
                 Items = Categories,
                 TotalItems = Total
             };
+    }
+
+
+    public async Task NavigateToEdit(Guid categoryId)
+    {
+        NavigationManager.NavigateTo("/categories/edit/"+categoryId);
     }
 
 }
