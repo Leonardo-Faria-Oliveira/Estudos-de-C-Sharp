@@ -53,7 +53,7 @@
                     }
                     else
                     {
-                        <MudText Class="text-uppercase">Enviar</MudText>
+                        <MudText Class="text-uppercase">Salvar</MudText>
                     }
                 </MudButton>
             </MudPaper>
@@ -64,11 +64,7 @@
 
 </MudContainer>
 
-}
 
-<div>
-    <a href="/categories">Back to List</a>
-</div>
 
 @code {
 
@@ -119,7 +115,7 @@
                 Title = title,
                 Description = description
             };
-        var res = await _categoryService.Post(categoryRequest);
+        var res = await _categoryService.Patch(Guid.Parse(Id), categoryRequest);
 
         Snackbar.Configuration.PositionClass = Defaults.Classes.Position.BottomStart;
 

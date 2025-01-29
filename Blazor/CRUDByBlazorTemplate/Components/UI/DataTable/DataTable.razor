@@ -33,7 +33,9 @@
                                 <MudStack Row>
                                     <MudIconButton OnClick="@(() => Navigate((Guid)context.Item.Id))"
                                     Icon="@Icons.Material.Outlined.Edit" Color="Color.Warning" Size="@Size.Small" />
-                                    <MudIconButton Icon="@Icons.Material.Outlined.Delete" Color="Color.Error" Size="@Size.Small" />
+                                    
+                                    <MudIconButton OnClick="@(() => OnDelete((Guid)context.Item.Id))"
+                                        Icon="@Icons.Material.Outlined.Delete" Color="Color.Error" Size="@Size.Small" />
                                 </MudStack>
                             </CellTemplate>
                         </TemplateColumn>
@@ -81,6 +83,9 @@
     [Parameter]
     public Func<Guid, Task> NavigateToEdit { get; set; }
 
+    [Parameter]
+    public Func<Guid, Task> DeleteData { get; set; }
+
     protected override void OnInitialized()
     {
         _isDisposed = false;
@@ -95,6 +100,11 @@
 
         return await GetData(state.Page); 
 
+    }
+
+    public async Task OnDelete(Guid Id)
+    {
+        await DeleteData(Id);
     }
 
     public void Navigate(Guid id)

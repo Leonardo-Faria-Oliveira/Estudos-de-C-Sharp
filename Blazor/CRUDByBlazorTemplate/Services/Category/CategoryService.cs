@@ -86,7 +86,7 @@ namespace CRUDByBlazorTemplate.Service
 
         public async Task<ServiceResponse> Patch(Guid id, CategoryRequest entity)
         {
-            var category = _repository.GetById(id);
+            var category = await _repository.GetById(id);
 
             if(category == null)
             {
@@ -98,9 +98,10 @@ namespace CRUDByBlazorTemplate.Service
                 );
             }
 
-            var mappedCategory = _mapper.ToModel(entity);
+            category.Title = entity.Title;
+            category.Description = entity.Description;   
 
-            await _repository.Patch(mappedCategory);
+            await _repository.Patch(category);
 
             return ServiceResponse.Factory
             (

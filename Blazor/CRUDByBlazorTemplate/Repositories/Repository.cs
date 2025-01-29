@@ -79,8 +79,9 @@ namespace CRUDByBlazorTemplate.Repository
 
         public virtual Task<T> Patch(T entity)
         {
+
             _context.Set<T>().Update(entity);
-            _context.SaveChanges();
+            _context.SaveChangesAsync();
 
             return Task.FromResult(entity);
         }

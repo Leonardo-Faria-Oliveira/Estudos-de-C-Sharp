@@ -15,9 +15,9 @@
 Class ="gap-12 d-flex flex-column justify-content-around h-auto"
 MaxWidth="MaxWidth.Large"
 >
-    
+
     <MudText Typo="Typo.h4">Listagem de categorias</MudText>
-        
+
     <div class="gap-3 d-flex flex-column justify-content-around h-auto">
 
         <div class="d-flex flex-row justify-content-end">
@@ -36,9 +36,10 @@ MaxWidth="MaxWidth.Large"
                    DataTableVM="@(new ViewModel<CategoryDto>(Headers, Categories, Total, Take, Page, Search, Response))"
                    GetData="GetCategories" 
                    NavigateToEdit="NavigateToEdit"
+                   DeleteData="DeleteCategory"
                    />
     </div>
-    
+
 
 </MudContainer>
 
@@ -83,6 +84,14 @@ MaxWidth="MaxWidth.Large"
                 Items = Categories,
                 TotalItems = Total
             };
+    }
+
+    public async Task<bool> DeleteCategory(Guid Id)
+    {
+        var response = await _categoryService.Delete(Id);
+
+        return response.StatusCode == System.Net.HttpStatusCode.OK;
+
     }
 
 
