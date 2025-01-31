@@ -2,6 +2,7 @@
 using CRUDByBlazorTemplate.Dtos;
 using CRUDByBlazorTemplate.Mappers;
 using CRUDByBlazorTemplate.Models;
+using CRUDByBlazorTemplate.Repositories;
 using CRUDByBlazorTemplate.Repository;
 using CRUDByBlazorTemplate.Request;
 using CRUDByBlazorTemplate.Response;
@@ -18,9 +19,14 @@ namespace CRUDByBlazorTemplate.Config
             services.AddScoped<AppDbContext>();
 
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+
             services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<IBaseMapper<Category, CategoryDto, CategoryByIdResponse, CategoryResponse, CategoryRequest>, CategoryMapper>();
             services.AddScoped<ICategoryService, CategoryService>();
+
+            services.AddScoped<IPostRepository, PostRepository>();
+
+            services.AddScoped<IUserRepository, UserRepository>();
             
 
             return services;

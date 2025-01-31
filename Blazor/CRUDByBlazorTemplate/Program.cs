@@ -22,6 +22,8 @@ builder.Services.AddServerSideBlazor();
 
 builder.Services.AddMudBlazorSnackbar();
 
+builder.Services.AddMudBlazorDialog();
+
 builder.Services.AddMudServices();
 builder.Services.AddMudServices(options => { 
     options.PopoverOptions.CheckForPopoverProvider = false;

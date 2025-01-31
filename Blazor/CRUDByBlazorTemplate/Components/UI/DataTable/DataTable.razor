@@ -1,20 +1,24 @@
 ﻿@using CRUDByBlazorTemplate.Dtos
 @using System.Reflection
+@using CRUDByBlazorTemplate.Components.UI.Dialog
+@inject IDialogService DialogService
+
 @implements IDisposable
 
 @typeparam T where T : BaseDto
 
 <MudDataGrid T="T"
+             Ref="@grid"
              Filterable="false"
              Virtualize="true"
              ServerData="OnLoad">
     <ToolBarContent>
         <MudTextField Placeholder="Busque um registro"
-        Adornment="Adornment.Start"
-        Immediate="true"
-        AdornmentIcon="@Icons.Material.Filled.Search"
-        IconSize="Size.Medium"
-        Class="mt-0" />
+                      Adornment="Adornment.Start"
+                      Immediate="true"
+                      AdornmentIcon="@Icons.Material.Filled.Search"
+                      IconSize="Size.Medium"
+                      Class="mt-0" />
     </ToolBarContent>
 
     <Columns>
@@ -26,20 +30,22 @@
 
                 if (prop != null)
                 {
-
-                    if(header.PropName.Equals("Id")){
+                    if (header.PropName.Equals("Id"))
+                    {
                         <TemplateColumn>
                             <CellTemplate>
                                 <MudStack Row>
                                     <MudIconButton OnClick="@(() => Navigate((Guid)context.Item.Id))"
                                     Icon="@Icons.Material.Outlined.Edit" Color="Color.Warning" Size="@Size.Small" />
-                                    
+
                                     <MudIconButton OnClick="@(() => OnDelete((Guid)context.Item.Id))"
-                                        Icon="@Icons.Material.Outlined.Delete" Color="Color.Error" Size="@Size.Small" />
+                                    Icon="@Icons.Material.Outlined.Delete" Color="Color.Error" Size="@Size.Small" />
                                 </MudStack>
                             </CellTemplate>
                         </TemplateColumn>
-                    }else{
+                    }
+                    else
+                    {
                         <PropertyColumn T="T"
                         TProperty="object"
                         Sortable="false"
@@ -47,12 +53,8 @@
                         Title="@header.Header"
                         Property="@(item => prop.GetValue(item))" />
                     }
-
                 }
-
             }
-
-
         }
     </Columns>
 
@@ -61,18 +63,16 @@
     </NoRecordsContent>
 
     <PagerContent>
-        <MudDataGridPager 
-        ShowPageNumber="true"
+        <MudDataGridPager ShowPageNumber="true"
         PageSizeSelector="false"
         ShowNavigation="true">
         </MudDataGridPager>
     </PagerContent>
-
 </MudDataGrid>
 
 @code {
-
     private bool _isDisposed;
+    private MudDataGrid<T> grid;
 
     [Parameter]
     public ViewModel<T> DataTableVM { get; set; } = default;
@@ -98,13 +98,34 @@
             return new GridData<T>();
         }
 
-        return await GetData(state.Page); 
-
+        return await GetData(state.Page);
     }
 
     public async Task OnDelete(Guid Id)
     {
+        var parameters = new DialogParameters<Dialog>
+        {
+            { x => x.ContentText, "Deseja realmente excluir este registro?" },
+            { x => x.ButtonText, "Excluir" },
+            { x => x.Color, Color.Error },
+            { x => x.Action, async () => 
+                {
+                    await DeleteHandle(Id);
+                }
+            }
+        };
+
+        var options = new DialogOptions() { CloseButton = true, MaxWidth = MaxWidth.ExtraSmall };
+
+        await DialogService.ShowAsync<Dialog>("Excluir", parameters, options);
+
+    }
+
+    public async Task DeleteHandle(Guid Id)
+    {
         await DeleteData(Id);
+        StateHasChanged();
+        await grid.ReloadServerData();
     }
 
     public void Navigate(Guid id)
