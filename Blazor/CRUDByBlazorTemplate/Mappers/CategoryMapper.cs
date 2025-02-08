@@ -74,7 +74,7 @@ namespace CRUDByBlazorTemplate.Mappers
                 Skip = pagination.Skip,
                 Take = pagination.Take,
                 Total = pagination.Total,
-                CategoryDtos = categoryDtos
+                Dtos = categoryDtos
             };
         }
     }

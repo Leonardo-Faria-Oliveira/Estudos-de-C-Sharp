@@ -2,7 +2,7 @@
 
 namespace CRUDByBlazorTemplate.Models
 {
-    public class BaseModel
+    public abstract class BaseModel
     {
 
         [Key]

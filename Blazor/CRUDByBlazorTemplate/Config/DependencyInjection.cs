@@ -6,6 +6,7 @@ using CRUDByBlazorTemplate.Repositories;
 using CRUDByBlazorTemplate.Repository;
 using CRUDByBlazorTemplate.Request;
 using CRUDByBlazorTemplate.Response;
+using CRUDByBlazorTemplate.Response.Post;
 using CRUDByBlazorTemplate.Service;
 using CRUDByBlazorTemplate.Services;
 
@@ -25,6 +26,8 @@ namespace CRUDByBlazorTemplate.Config
             services.AddScoped<ICategoryService, CategoryService>();
 
             services.AddScoped<IPostRepository, PostRepository>();
+            services.AddScoped<IBaseMapper<Post, PostDto, PostByIdResponse, PostResponse, PostRequest>, PostMapper>();
+            services.AddScoped<IPostService, PostService>();
 
             services.AddScoped<IUserRepository, UserRepository>();
             

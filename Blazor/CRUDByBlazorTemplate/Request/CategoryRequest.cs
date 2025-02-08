@@ -2,7 +2,7 @@
 
 namespace CRUDByBlazorTemplate.Request
 {
-    public class CategoryRequest
+    public class CategoryRequest : BaseRequest
     {
 
         [JsonProperty("title")]

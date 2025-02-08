@@ -30,8 +30,7 @@ namespace CRUDByBlazorTemplate.Service
                 return ServiceResponse.Factory
                 (
                     HttpStatusCode.NotFound,
-                    "Categoria não encontrada",
-                     null
+                    "Categoria não encontrada"
                 );
                 
                 
@@ -41,8 +40,7 @@ namespace CRUDByBlazorTemplate.Service
             return ServiceResponse.Factory
             (
                 HttpStatusCode.OK,
-                "Categoria deletada com sucesso",
-                 null
+                "Categoria deletada com sucesso"
             );
         }
 

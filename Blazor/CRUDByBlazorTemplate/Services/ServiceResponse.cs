@@ -11,7 +11,7 @@ namespace CRUDByBlazorTemplate.Services
 
         public object? Content { get; set; }
 
-        public static  ServiceResponse Factory (HttpStatusCode statusCode, string? message, object? content)
+        public static  ServiceResponse Factory (HttpStatusCode statusCode, string? message=null, object? content=null)
         {
             return new ServiceResponse
             {

@@ -8,13 +8,13 @@ namespace CRUDByBlazorTemplate.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class CategoryController(ICategoryService categoryService) : BaseController
+    public class CategoryController(ICategoryService categoryService) : BaseController<CategoryRequest>
     {
 
         private readonly ICategoryService _categoryService = categoryService;
 
         [HttpGet]
-        public async Task<IActionResult> Get(int take, int skip, string? search)
+        public override async Task<IActionResult> Get(int take, int skip, string? search)
         {
             var result = await _categoryService.Get(take, skip, search);
 
@@ -29,7 +29,7 @@ namespace CRUDByBlazorTemplate.Controllers
 
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetById(Guid id)
+        public override async Task<IActionResult> GetById(Guid id)
         {
             var result = await _categoryService.GetById(id);
 
@@ -44,7 +44,7 @@ namespace CRUDByBlazorTemplate.Controllers
 
 
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] CategoryRequest request)
+        public override async Task<IActionResult> Post([FromBody] CategoryRequest request)
         {
             var result = await _categoryService.Post(request);
 
@@ -58,7 +58,7 @@ namespace CRUDByBlazorTemplate.Controllers
 
 
         [HttpPatch("{id}")]
-        public async Task<IActionResult> Patch(Guid id, [FromBody] CategoryRequest request)
+        public override async Task<IActionResult> Patch(Guid id, [FromBody] CategoryRequest request)
         {
 
             var result = await _categoryService.Patch(id, request);
@@ -72,7 +72,7 @@ namespace CRUDByBlazorTemplate.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(Guid id)
+        public override async Task<IActionResult> Delete(Guid id)
         {
             var result = await _categoryService.Delete(id);
 
