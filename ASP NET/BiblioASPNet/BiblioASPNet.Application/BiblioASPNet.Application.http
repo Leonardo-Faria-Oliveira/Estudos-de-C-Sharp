@@ -1,0 +1,6 @@
+@BiblioASPNet.Application_HostAddress = http://localhost:5220
+
+GET {{BiblioASPNet.Application_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

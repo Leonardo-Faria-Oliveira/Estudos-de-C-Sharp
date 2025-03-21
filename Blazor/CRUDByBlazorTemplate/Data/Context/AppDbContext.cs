@@ -1,5 +1,8 @@
 ﻿using CRUDByBlazorTemplate.Models;
+
 using Microsoft.EntityFrameworkCore;
+
+using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.General;
 
 namespace CRUDByBlazorTemplate.Data.Context
 {

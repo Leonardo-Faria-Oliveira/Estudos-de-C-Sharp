@@ -4,6 +4,7 @@ using CRUDByBlazorTemplate.Models;
 using CRUDByBlazorTemplate.Repositories;
 using CRUDByBlazorTemplate.Request;
 using CRUDByBlazorTemplate.Response.Post;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 
 namespace CRUDByBlazorTemplate.Services
@@ -15,7 +16,7 @@ namespace CRUDByBlazorTemplate.Services
 
         private readonly IBaseMapper<Post, PostDto, PostByIdResponse, PostResponse, PostRequest> _mapper;
 
-        public PostService(PostRepository postRepository, PostMapper mapper) 
+        public PostService(IPostRepository postRepository, IBaseMapper<Post, PostDto, PostByIdResponse, PostResponse, PostRequest> mapper) 
         { 
             _postRepository = postRepository;
             _mapper = mapper;
@@ -125,5 +126,7 @@ namespace CRUDByBlazorTemplate.Services
                 null
             );
         }
+
+
     }
 }

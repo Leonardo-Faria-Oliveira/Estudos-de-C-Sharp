@@ -1,86 +1,98 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\leona\\source\\repos\\Estudos-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\",
+  "WorkspaceRootPath": "C:\\Users\\leona\\source\\repos\\Leonardo-Faria-Oliveira\\Estudos-de-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|c:\\users\\leona\\source\\repos\\estudos-c-sharp\\blazor\\crudbyblazortemplate\\components\\pages\\categorypages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|solutionrelative:components\\pages\\categorypages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|c:\\users\\leona\\source\\repos\\leonardo-faria-oliveira\\estudos-de-c-sharp\\blazor\\crudbyblazortemplate\\services\\category\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|solutionrelative:services\\category\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|c:\\users\\leona\\source\\repos\\estudos-c-sharp\\blazor\\crudbyblazortemplate\\components\\pages\\categorypages\\edit.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|solutionrelative:components\\pages\\categorypages\\edit.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|c:\\users\\leona\\source\\repos\\leonardo-faria-oliveira\\estudos-de-c-sharp\\blazor\\crudbyblazortemplate\\request\\categoryrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|solutionrelative:request\\categoryrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|c:\\users\\leona\\source\\repos\\estudos-c-sharp\\blazor\\crudbyblazortemplate\\components\\pages\\categorypages\\details.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|solutionrelative:components\\pages\\categorypages\\details.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|c:\\users\\leona\\source\\repos\\leonardo-faria-oliveira\\estudos-de-c-sharp\\blazor\\crudbyblazortemplate\\mappers\\ibasemapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|solutionrelative:mappers\\ibasemapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|c:\\users\\leona\\source\\repos\\estudos-c-sharp\\blazor\\crudbyblazortemplate\\components\\pages\\categorypages\\delete.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|solutionrelative:components\\pages\\categorypages\\delete.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|c:\\users\\leona\\source\\repos\\leonardo-faria-oliveira\\estudos-de-c-sharp\\blazor\\crudbyblazortemplate\\mappers\\categorymapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|solutionrelative:mappers\\categorymapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|c:\\users\\leona\\source\\repos\\estudos-c-sharp\\blazor\\crudbyblazortemplate\\components\\pages\\categorypages\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|solutionrelative:components\\pages\\categorypages\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|c:\\users\\leona\\source\\repos\\leonardo-faria-oliveira\\estudos-de-c-sharp\\blazor\\crudbyblazortemplate\\repositories\\category\\categoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|solutionrelative:repositories\\category\\categoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|c:\\users\\leona\\source\\repos\\estudos-c-sharp\\blazor\\crudbyblazortemplate\\components\\pages\\weather.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|solutionrelative:components\\pages\\weather.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|c:\\users\\leona\\source\\repos\\leonardo-faria-oliveira\\estudos-de-c-sharp\\blazor\\crudbyblazortemplate\\services\\category\\icategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|solutionrelative:services\\category\\icategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|c:\\users\\leona\\source\\repos\\estudos-c-sharp\\blazor\\crudbyblazortemplate\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|solutionrelative:components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|c:\\users\\leona\\source\\repos\\leonardo-faria-oliveira\\estudos-de-c-sharp\\blazor\\crudbyblazortemplate\\services\\serviceresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|solutionrelative:services\\serviceresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|c:\\users\\leona\\source\\repos\\estudos-c-sharp\\blazor\\crudbyblazortemplate\\components\\pages\\error.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|solutionrelative:components\\pages\\error.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|c:\\users\\leona\\source\\repos\\leonardo-faria-oliveira\\estudos-de-c-sharp\\blazor\\crudbyblazortemplate\\services\\post\\postservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|solutionrelative:services\\post\\postservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|c:\\users\\leona\\source\\repos\\estudos-c-sharp\\blazor\\crudbyblazortemplate\\components\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|solutionrelative:components\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|c:\\users\\leona\\source\\repos\\leonardo-faria-oliveira\\estudos-de-c-sharp\\blazor\\crudbyblazortemplate\\services\\ibaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|solutionrelative:services\\ibaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|c:\\users\\leona\\source\\repos\\estudos-c-sharp\\blazor\\crudbyblazortemplate\\repository\\category\\icategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|solutionrelative:repository\\category\\icategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|c:\\users\\leona\\source\\repos\\leonardo-faria-oliveira\\estudos-de-c-sharp\\blazor\\crudbyblazortemplate\\services\\post\\ipostservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|solutionrelative:services\\post\\ipostservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|c:\\users\\leona\\source\\repos\\estudos-c-sharp\\blazor\\crudbyblazortemplate\\config\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|c:\\users\\leona\\source\\repos\\leonardo-faria-oliveira\\estudos-de-c-sharp\\blazor\\crudbyblazortemplate\\config\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|solutionrelative:config\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|c:\\users\\leona\\source\\repos\\estudos-c-sharp\\blazor\\crudbyblazortemplate\\repository\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|solutionrelative:repository\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|c:\\users\\leona\\source\\repos\\leonardo-faria-oliveira\\estudos-de-c-sharp\\blazor\\crudbyblazortemplate\\repositories\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|solutionrelative:repositories\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|c:\\users\\leona\\source\\repos\\estudos-c-sharp\\blazor\\crudbyblazortemplate\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|solutionrelative:components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|c:\\users\\leona\\source\\repos\\leonardo-faria-oliveira\\estudos-de-c-sharp\\blazor\\crudbyblazortemplate\\repositories\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|solutionrelative:repositories\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|c:\\users\\leona\\source\\repos\\estudos-c-sharp\\blazor\\crudbyblazortemplate\\utils\\pagination.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|c:\\users\\leona\\source\\repos\\leonardo-faria-oliveira\\estudos-de-c-sharp\\blazor\\crudbyblazortemplate\\utils\\pagination.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|solutionrelative:utils\\pagination.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|c:\\users\\leona\\source\\repos\\estudos-c-sharp\\blazor\\crudbyblazortemplate\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|c:\\users\\leona\\source\\repos\\leonardo-faria-oliveira\\estudos-de-c-sharp\\blazor\\crudbyblazortemplate\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|c:\\users\\leona\\source\\repos\\estudos-c-sharp\\blazor\\crudbyblazortemplate\\repository\\category\\categoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|solutionrelative:repository\\category\\categoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|c:\\users\\leona\\source\\repos\\leonardo-faria-oliveira\\estudos-de-c-sharp\\blazor\\crudbyblazortemplate\\controllers\\postcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|solutionrelative:controllers\\postcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|c:\\users\\leona\\source\\repos\\estudos-c-sharp\\blazor\\crudbyblazortemplate\\repository\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|solutionrelative:repository\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|c:\\users\\leona\\source\\repos\\estudos-c-sharp\\blazor\\crudbyblazortemplate\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|solutionrelative:models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|c:\\users\\leona\\source\\repos\\estudos-c-sharp\\blazor\\crudbyblazortemplate\\models\\basemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|solutionrelative:models\\basemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|c:\\users\\leona\\source\\repos\\estudos-c-sharp\\blazor\\crudbyblazortemplate\\data\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|c:\\users\\leona\\source\\repos\\leonardo-faria-oliveira\\estudos-de-c-sharp\\blazor\\crudbyblazortemplate\\data\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|solutionrelative:data\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|c:\\users\\leona\\source\\repos\\leonardo-faria-oliveira\\estudos-de-c-sharp\\blazor\\crudbyblazortemplate\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|c:\\users\\leona\\source\\repos\\leonardo-faria-oliveira\\estudos-de-c-sharp\\blazor\\crudbyblazortemplate\\data\\context\\securitydbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|solutionrelative:data\\context\\securitydbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|c:\\users\\leona\\source\\repos\\leonardo-faria-oliveira\\estudos-de-c-sharp\\blazor\\crudbyblazortemplate\\data\\context\\securitydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|solutionrelative:data\\context\\securitydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|c:\\users\\leona\\source\\repos\\leonardo-faria-oliveira\\estudos-de-c-sharp\\blazor\\crudbyblazortemplate\\.filenesting.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|solutionrelative:.filenesting.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|c:\\users\\leona\\source\\repos\\leonardo-faria-oliveira\\estudos-de-c-sharp\\blazor\\crudbyblazortemplate\\libman.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|solutionrelative:libman.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|c:\\users\\leona\\source\\repos\\leonardo-faria-oliveira\\estudos-de-c-sharp\\blazor\\crudbyblazortemplate\\models\\security\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74571633-450D-4B7E-A3E2-91F3C23282D7}|CRUDByBlazorTemplate.csproj|solutionrelative:models\\security\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -89,272 +101,289 @@
       "VerticalTabListWidth": 226,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 15,
+          "DockedWidth": 387,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Edit.razor",
-              "DocumentMoniker": "C:\\Users\\leona\\source\\repos\\Estudos-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Components\\Pages\\CategoryPages\\Edit.razor",
-              "RelativeDocumentMoniker": "Components\\Pages\\CategoryPages\\Edit.razor",
-              "ToolTip": "C:\\Users\\leona\\source\\repos\\Estudos-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Components\\Pages\\CategoryPages\\Edit.razor",
-              "RelativeToolTip": "Components\\Pages\\CategoryPages\\Edit.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-11T03:59:18.45Z",
-              "EditorCaption": ""
+              "Title": "CategoryRequest.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\source\\repos\\Leonardo-Faria-Oliveira\\Estudos-de-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Request\\CategoryRequest.cs",
+              "RelativeDocumentMoniker": "Request\\CategoryRequest.cs",
+              "ToolTip": "C:\\Users\\leona\\source\\repos\\Leonardo-Faria-Oliveira\\Estudos-de-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Request\\CategoryRequest.cs",
+              "RelativeToolTip": "Request\\CategoryRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T16:20:59.569Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Details.razor",
-              "DocumentMoniker": "C:\\Users\\leona\\source\\repos\\Estudos-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Components\\Pages\\CategoryPages\\Details.razor",
-              "RelativeDocumentMoniker": "Components\\Pages\\CategoryPages\\Details.razor",
-              "ToolTip": "C:\\Users\\leona\\source\\repos\\Estudos-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Components\\Pages\\CategoryPages\\Details.razor",
-              "RelativeToolTip": "Components\\Pages\\CategoryPages\\Details.razor",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAAAA0AAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-11T03:58:03.264Z",
-              "EditorCaption": ""
+              "Title": "IBaseMapper.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\source\\repos\\Leonardo-Faria-Oliveira\\Estudos-de-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Mappers\\IBaseMapper.cs",
+              "RelativeDocumentMoniker": "Mappers\\IBaseMapper.cs",
+              "ToolTip": "C:\\Users\\leona\\source\\repos\\Leonardo-Faria-Oliveira\\Estudos-de-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Mappers\\IBaseMapper.cs",
+              "RelativeToolTip": "Mappers\\IBaseMapper.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAuwA4AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T16:14:51.139Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Delete.razor",
-              "DocumentMoniker": "C:\\Users\\leona\\source\\repos\\Estudos-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Components\\Pages\\CategoryPages\\Delete.razor",
-              "RelativeDocumentMoniker": "Components\\Pages\\CategoryPages\\Delete.razor",
-              "ToolTip": "C:\\Users\\leona\\source\\repos\\Estudos-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Components\\Pages\\CategoryPages\\Delete.razor",
-              "RelativeToolTip": "Components\\Pages\\CategoryPages\\Delete.razor",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAAAA0AAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-11T03:58:01.444Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Weather.razor",
-              "DocumentMoniker": "C:\\Users\\leona\\source\\repos\\Estudos-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Components\\Pages\\Weather.razor",
-              "RelativeDocumentMoniker": "Components\\Pages\\Weather.razor",
-              "ToolTip": "C:\\Users\\leona\\source\\repos\\Estudos-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Components\\Pages\\Weather.razor",
-              "RelativeToolTip": "Components\\Pages\\Weather.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-11T03:57:55.789Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Home.razor",
-              "DocumentMoniker": "C:\\Users\\leona\\source\\repos\\Estudos-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Components\\Pages\\Home.razor",
-              "RelativeDocumentMoniker": "Components\\Pages\\Home.razor",
-              "ToolTip": "C:\\Users\\leona\\source\\repos\\Estudos-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Components\\Pages\\Home.razor",
-              "RelativeToolTip": "Components\\Pages\\Home.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-11T03:57:54.347Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Error.razor",
-              "DocumentMoniker": "C:\\Users\\leona\\source\\repos\\Estudos-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Components\\Pages\\Error.razor",
-              "RelativeDocumentMoniker": "Components\\Pages\\Error.razor",
-              "ToolTip": "C:\\Users\\leona\\source\\repos\\Estudos-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Components\\Pages\\Error.razor",
-              "RelativeToolTip": "Components\\Pages\\Error.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-11T03:57:52.606Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Counter.razor",
-              "DocumentMoniker": "C:\\Users\\leona\\source\\repos\\Estudos-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Components\\Pages\\Counter.razor",
-              "RelativeDocumentMoniker": "Components\\Pages\\Counter.razor",
-              "ToolTip": "C:\\Users\\leona\\source\\repos\\Estudos-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Components\\Pages\\Counter.razor",
-              "RelativeToolTip": "Components\\Pages\\Counter.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-11T03:57:50.475Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "DependencyInjection.cs",
-              "DocumentMoniker": "C:\\Users\\leona\\source\\repos\\Estudos-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Config\\DependencyInjection.cs",
-              "RelativeDocumentMoniker": "Config\\DependencyInjection.cs",
-              "ToolTip": "C:\\Users\\leona\\source\\repos\\Estudos-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Config\\DependencyInjection.cs",
-              "RelativeToolTip": "Config\\DependencyInjection.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Title": "CategoryMapper.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\source\\repos\\Leonardo-Faria-Oliveira\\Estudos-de-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Mappers\\CategoryMapper.cs",
+              "RelativeDocumentMoniker": "Mappers\\CategoryMapper.cs",
+              "ToolTip": "C:\\Users\\leona\\source\\repos\\Leonardo-Faria-Oliveira\\Estudos-de-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Mappers\\CategoryMapper.cs",
+              "RelativeToolTip": "Mappers\\CategoryMapper.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAxwEQAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T03:53:52.918Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "CategoryRepository.cs",
-              "DocumentMoniker": "C:\\Users\\leona\\source\\repos\\Estudos-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Repository\\Category\\CategoryRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\Category\\CategoryRepository.cs",
-              "ToolTip": "C:\\Users\\leona\\source\\repos\\Estudos-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Repository\\Category\\CategoryRepository.cs",
-              "RelativeToolTip": "Repository\\Category\\CategoryRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T03:33:44.812Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-26T16:14:38.901Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "ICategoryRepository.cs",
-              "DocumentMoniker": "C:\\Users\\leona\\source\\repos\\Estudos-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Repository\\Category\\ICategoryRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\Category\\ICategoryRepository.cs",
-              "ToolTip": "C:\\Users\\leona\\source\\repos\\Estudos-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Repository\\Category\\ICategoryRepository.cs",
-              "RelativeToolTip": "Repository\\Category\\ICategoryRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Title": "IPostService.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\source\\repos\\Leonardo-Faria-Oliveira\\Estudos-de-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Services\\Post\\IPostService.cs",
+              "RelativeDocumentMoniker": "Services\\Post\\IPostService.cs",
+              "ToolTip": "C:\\Users\\leona\\source\\repos\\Leonardo-Faria-Oliveira\\Estudos-de-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Services\\Post\\IPostService.cs",
+              "RelativeToolTip": "Services\\Post\\IPostService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T03:27:22.246Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-26T01:56:12.778Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "BaseModel.cs",
-              "DocumentMoniker": "C:\\Users\\leona\\source\\repos\\Estudos-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Models\\BaseModel.cs",
-              "RelativeDocumentMoniker": "Models\\BaseModel.cs",
-              "ToolTip": "C:\\Users\\leona\\source\\repos\\Estudos-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Models\\BaseModel.cs",
-              "RelativeToolTip": "Models\\BaseModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA/AAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "ServiceResponse.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\source\\repos\\Leonardo-Faria-Oliveira\\Estudos-de-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Services\\ServiceResponse.cs",
+              "RelativeDocumentMoniker": "Services\\ServiceResponse.cs",
+              "ToolTip": "C:\\Users\\leona\\source\\repos\\Leonardo-Faria-Oliveira\\Estudos-de-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Services\\ServiceResponse.cs",
+              "RelativeToolTip": "Services\\ServiceResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T03:16:13.874Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-26T01:51:45.59Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Repository.cs",
-              "DocumentMoniker": "C:\\Users\\leona\\source\\repos\\Estudos-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Repository\\Repository.cs",
-              "RelativeDocumentMoniker": "Repository\\Repository.cs",
-              "ToolTip": "C:\\Users\\leona\\source\\repos\\Estudos-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Repository\\Repository.cs",
-              "RelativeToolTip": "Repository\\Repository.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAYwAgAAAARAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "IBaseService.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\source\\repos\\Leonardo-Faria-Oliveira\\Estudos-de-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Services\\IBaseService.cs",
+              "RelativeDocumentMoniker": "Services\\IBaseService.cs",
+              "ToolTip": "C:\\Users\\leona\\source\\repos\\Leonardo-Faria-Oliveira\\Estudos-de-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Services\\IBaseService.cs",
+              "RelativeToolTip": "Services\\IBaseService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T02:20:57.646Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Pagination.cs",
-              "DocumentMoniker": "C:\\Users\\leona\\source\\repos\\Estudos-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Utils\\Pagination.cs",
-              "RelativeDocumentMoniker": "Utils\\Pagination.cs",
-              "ToolTip": "C:\\Users\\leona\\source\\repos\\Estudos-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Utils\\Pagination.cs",
-              "RelativeToolTip": "Utils\\Pagination.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T02:16:54.969Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-26T01:51:42.428Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
               "Title": "IRepository.cs",
-              "DocumentMoniker": "C:\\Users\\leona\\source\\repos\\Estudos-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Repository\\IRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\IRepository.cs",
-              "ToolTip": "C:\\Users\\leona\\source\\repos\\Estudos-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Repository\\IRepository.cs",
-              "RelativeToolTip": "Repository\\IRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\leona\\source\\repos\\Leonardo-Faria-Oliveira\\Estudos-de-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Repositories\\IRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\IRepository.cs",
+              "ToolTip": "C:\\Users\\leona\\source\\repos\\Leonardo-Faria-Oliveira\\Estudos-de-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Repositories\\IRepository.cs",
+              "RelativeToolTip": "Repositories\\IRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T01:57:14.839Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.razor",
-              "DocumentMoniker": "C:\\Users\\leona\\source\\repos\\Estudos-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Components\\Pages\\CategoryPages\\Index.razor",
-              "RelativeDocumentMoniker": "Components\\Pages\\CategoryPages\\Index.razor",
-              "ToolTip": "C:\\Users\\leona\\source\\repos\\Estudos-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Components\\Pages\\CategoryPages\\Index.razor",
-              "RelativeToolTip": "Components\\Pages\\CategoryPages\\Index.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-11T00:50:11.916Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "NavMenu.razor",
-              "DocumentMoniker": "C:\\Users\\leona\\source\\repos\\Estudos-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Components\\Layout\\NavMenu.razor",
-              "RelativeDocumentMoniker": "Components\\Layout\\NavMenu.razor",
-              "ToolTip": "C:\\Users\\leona\\source\\repos\\Estudos-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Components\\Layout\\NavMenu.razor",
-              "RelativeToolTip": "Components\\Layout\\NavMenu.razor",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-11T00:48:15.604Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-26T01:44:55.132Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Create.razor",
-              "DocumentMoniker": "C:\\Users\\leona\\source\\repos\\Estudos-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Components\\Pages\\CategoryPages\\Create.razor",
-              "RelativeDocumentMoniker": "Components\\Pages\\CategoryPages\\Create.razor",
-              "ToolTip": "C:\\Users\\leona\\source\\repos\\Estudos-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Components\\Pages\\CategoryPages\\Create.razor",
-              "RelativeToolTip": "Components\\Pages\\CategoryPages\\Create.razor",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAACQAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-11T00:46:18.264Z",
+              "Title": "CategoryRepository.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\source\\repos\\Leonardo-Faria-Oliveira\\Estudos-de-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Repositories\\Category\\CategoryRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Category\\CategoryRepository.cs",
+              "ToolTip": "C:\\Users\\leona\\source\\repos\\Leonardo-Faria-Oliveira\\Estudos-de-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Repositories\\Category\\CategoryRepository.cs",
+              "RelativeToolTip": "Repositories\\Category\\CategoryRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T01:32:42.526Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Pagination.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\source\\repos\\Leonardo-Faria-Oliveira\\Estudos-de-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Utils\\Pagination.cs",
+              "RelativeDocumentMoniker": "Utils\\Pagination.cs",
+              "ToolTip": "C:\\Users\\leona\\source\\repos\\Leonardo-Faria-Oliveira\\Estudos-de-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Utils\\Pagination.cs",
+              "RelativeToolTip": "Utils\\Pagination.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T01:09:33.225Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Repository.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\source\\repos\\Leonardo-Faria-Oliveira\\Estudos-de-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Repositories\\Repository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Repository.cs",
+              "ToolTip": "C:\\Users\\leona\\source\\repos\\Leonardo-Faria-Oliveira\\Estudos-de-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Repositories\\Repository.cs",
+              "RelativeToolTip": "Repositories\\Repository.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAgwEQAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T00:58:34.644Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "PostController.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\source\\repos\\Leonardo-Faria-Oliveira\\Estudos-de-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Controllers\\PostController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PostController.cs",
+              "ToolTip": "C:\\Users\\leona\\source\\repos\\Leonardo-Faria-Oliveira\\Estudos-de-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Controllers\\PostController.cs",
+              "RelativeToolTip": "Controllers\\PostController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T22:29:27.135Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CategoryService.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\source\\repos\\Leonardo-Faria-Oliveira\\Estudos-de-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Services\\Category\\CategoryService.cs",
+              "RelativeDocumentMoniker": "Services\\Category\\CategoryService.cs",
+              "ToolTip": "C:\\Users\\leona\\source\\repos\\Leonardo-Faria-Oliveira\\Estudos-de-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Services\\Category\\CategoryService.cs",
+              "RelativeToolTip": "Services\\Category\\CategoryService.cs",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAkwFwAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T22:22:34.481Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ICategoryService.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\source\\repos\\Leonardo-Faria-Oliveira\\Estudos-de-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Services\\Category\\ICategoryService.cs",
+              "RelativeDocumentMoniker": "Services\\Category\\ICategoryService.cs",
+              "ToolTip": "C:\\Users\\leona\\source\\repos\\Leonardo-Faria-Oliveira\\Estudos-de-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Services\\Category\\ICategoryService.cs",
+              "RelativeToolTip": "Services\\Category\\ICategoryService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T22:22:32.618Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PostService.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\source\\repos\\Leonardo-Faria-Oliveira\\Estudos-de-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Services\\Post\\PostService.cs",
+              "RelativeDocumentMoniker": "Services\\Post\\PostService.cs",
+              "ToolTip": "C:\\Users\\leona\\source\\repos\\Leonardo-Faria-Oliveira\\Estudos-de-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Services\\Post\\PostService.cs",
+              "RelativeToolTip": "Services\\Post\\PostService.cs",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAowHQAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T22:19:10.142Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\source\\repos\\Leonardo-Faria-Oliveira\\Estudos-de-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Config\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "Config\\DependencyInjection.cs",
+              "ToolTip": "C:\\Users\\leona\\source\\repos\\Leonardo-Faria-Oliveira\\Estudos-de-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Config\\DependencyInjection.cs",
+              "RelativeToolTip": "Config\\DependencyInjection.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAowB8AAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T22:14:34.073Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "SecurityDbContextFactory.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\source\\repos\\Leonardo-Faria-Oliveira\\Estudos-de-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Data\\Context\\SecurityDbContextFactory.cs",
+              "RelativeDocumentMoniker": "Data\\Context\\SecurityDbContextFactory.cs",
+              "ToolTip": "C:\\Users\\leona\\source\\repos\\Leonardo-Faria-Oliveira\\Estudos-de-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Data\\Context\\SecurityDbContextFactory.cs",
+              "RelativeToolTip": "Data\\Context\\SecurityDbContextFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T21:49:20.463Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\leona\\source\\repos\\Leonardo-Faria-Oliveira\\Estudos-de-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\leona\\source\\repos\\Leonardo-Faria-Oliveira\\Estudos-de-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-02-24T21:03:25.167Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": ".filenesting.json",
+              "DocumentMoniker": "C:\\Users\\leona\\source\\repos\\Leonardo-Faria-Oliveira\\Estudos-de-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\.filenesting.json",
+              "RelativeDocumentMoniker": ".filenesting.json",
+              "ToolTip": "C:\\Users\\leona\\source\\repos\\Leonardo-Faria-Oliveira\\Estudos-de-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\.filenesting.json",
+              "RelativeToolTip": ".filenesting.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-02-24T21:02:05.075Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "libman.json",
+              "DocumentMoniker": "C:\\Users\\leona\\source\\repos\\Leonardo-Faria-Oliveira\\Estudos-de-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\libman.json",
+              "RelativeDocumentMoniker": "libman.json",
+              "ToolTip": "C:\\Users\\leona\\source\\repos\\Leonardo-Faria-Oliveira\\Estudos-de-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\libman.json",
+              "RelativeToolTip": "libman.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-02-24T21:01:56.903Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\leona\\source\\repos\\Estudos-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\source\\repos\\Leonardo-Faria-Oliveira\\Estudos-de-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\leona\\source\\repos\\Estudos-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Program.cs",
+              "ToolTip": "C:\\Users\\leona\\source\\repos\\Leonardo-Faria-Oliveira\\Estudos-de-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAqwEIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T00:32:42.104Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-24T21:01:56.152Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\source\\repos\\Leonardo-Faria-Oliveira\\Estudos-de-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Models\\Security\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "Models\\Security\\ApplicationUser.cs",
+              "ToolTip": "C:\\Users\\leona\\source\\repos\\Leonardo-Faria-Oliveira\\Estudos-de-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Models\\Security\\ApplicationUser.cs",
+              "RelativeToolTip": "Models\\Security\\ApplicationUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T20:59:09.6Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\source\\repos\\Leonardo-Faria-Oliveira\\Estudos-de-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Data\\Context\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\Context\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\leona\\source\\repos\\Leonardo-Faria-Oliveira\\Estudos-de-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Data\\Context\\AppDbContext.cs",
+              "RelativeToolTip": "Data\\Context\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T20:58:49.093Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 19,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\leona\\source\\repos\\Estudos-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Data\\Context\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\Context\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\leona\\source\\repos\\Estudos-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Data\\Context\\AppDbContext.cs",
-              "RelativeToolTip": "Data\\Context\\AppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA3AAAAAAAAAA==",
+              "Title": "SecurityDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\source\\repos\\Leonardo-Faria-Oliveira\\Estudos-de-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Data\\Context\\SecurityDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\Context\\SecurityDbContext.cs",
+              "ToolTip": "C:\\Users\\leona\\source\\repos\\Leonardo-Faria-Oliveira\\Estudos-de-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Data\\Context\\SecurityDbContext.cs",
+              "RelativeToolTip": "Data\\Context\\SecurityDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T00:30:22.154Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Category.cs",
-              "DocumentMoniker": "C:\\Users\\leona\\source\\repos\\Estudos-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Models\\Category.cs",
-              "RelativeDocumentMoniker": "Models\\Category.cs",
-              "ToolTip": "C:\\Users\\leona\\source\\repos\\Estudos-C-Sharp\\Blazor\\CRUDByBlazorTemplate\\Models\\Category.cs",
-              "RelativeToolTip": "Models\\Category.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T00:27:38.793Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-24T20:58:47.497Z"
             }
           ]
         }

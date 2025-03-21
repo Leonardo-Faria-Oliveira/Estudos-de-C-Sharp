@@ -1,4 +1,6 @@
-﻿namespace CRUDByBlazorTemplate.Models
+﻿using Microsoft.AspNetCore.Identity;
+
+namespace CRUDByBlazorTemplate.Models
 {
     public class User : BaseModel
     {

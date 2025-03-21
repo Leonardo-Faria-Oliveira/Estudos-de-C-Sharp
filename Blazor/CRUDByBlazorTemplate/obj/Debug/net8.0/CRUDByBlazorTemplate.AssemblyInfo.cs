@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap5")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("CRUDByBlazorTemplate")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fc0138a09a9945dd37cd580b1d166e16c5d3d4bc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f7fa361265295b0650cbcb4c7a14c23d1f254c39")]
 [assembly: System.Reflection.AssemblyProductAttribute("CRUDByBlazorTemplate")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CRUDByBlazorTemplate")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
