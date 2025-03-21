@@ -25,14 +25,25 @@ namespace BiblioASPNet.Application.Utils.Validators
                     if (!isOptional) 
                     {
                         RuleFor(obj => property.GetValue(obj))
+                            .Cascade(CascadeMode.Stop)
                             .NotEmpty()
                             .WithMessage($"O campo {property.Name} não pode ser nulo ou vazio.");
+                        RuleFor(obj => property.GetValue(obj))
+                            .Must(BeBiggerThan3Caracthers!)
+                            .WithMessage($"O campo {property.Name} não pode possuir menos de 3 caracteres.");
                     }
                 }
             }
         }
 
-        
+
+        private bool BeBiggerThan3Caracthers(object arg)
+        {
+            return arg == null ? false : arg.ToString()!.Length >= 3;
+        }
+
+
+
     }
 
 

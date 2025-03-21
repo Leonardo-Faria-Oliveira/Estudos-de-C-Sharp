@@ -51,21 +51,18 @@ namespace Unit.Test.Services.Authors
 
         }
 
-        [Theory]
-        [InlineData(null)]
-        [InlineData("")]
-        [InlineData(" ")]
-        public async Task ShouldNotBePossibleToCreateAnAuthorWithoutAnAbout(string about)
+        [Fact]
+        public async Task ShouldNotBePossibleToCreateAnAuthorWithANameWithLessThan3Caracthers()
         {
 
             //Arrange
             var service = GetAuthorService();
             var mapper = AutoMapperBuilder.Build();
-            var request = CreateAuthorRequestBuilder.Build("about", about);
+            var request = CreateAuthorRequestBuilder.Build("name", "12");
 
             //Assert
             var exception = await Assert.ThrowsAsync<ValidationErrorException>(() => service.CreateAsync(request));
-            Assert.Equal("O campo About não pode ser nulo ou vazio.", exception.GetErrors().First());
+            Assert.Equal("O campo Name não pode possuir menos de 3 caracteres.", exception.GetErrors().First());
 
         }
 

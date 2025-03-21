@@ -1,6 +1,8 @@
 ﻿using BiblioASPNet.Application.Exceptions;
+using BiblioASPNet.Application.Responses;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
+using System.Net;
 
 namespace BiblioASPNet.Application.Filters
 {
@@ -13,9 +15,14 @@ namespace BiblioASPNet.Application.Filters
             {
 
                 var exception = (BaseException)context.Exception;
-                //var errorMessage = new ResponseErrorJson { ErrorMessage = exception.GetErrors() };
+                var errorResponse = new ServiceResponse
+                (
+                   (HttpStatusCode)exception.StatusCode,
+                   null,
+                   exception.GetErrors()
+                );
                 context.HttpContext.Response.StatusCode = exception.StatusCode;
-                context.Result = new ObjectResult(exception.GetErrors());
+                context.Result = new ObjectResult(errorResponse);
 
             }
             else
@@ -27,11 +34,16 @@ namespace BiblioASPNet.Application.Filters
 
         private void ThrowUnknowError(ExceptionContext context)
         {
-            //var errorMessage = new ResponseErrorJson { ErrorMessage = [context.Exception.Message] };
+            var errorResponse = new ServiceResponse
+            (
+               System.Net.HttpStatusCode.InternalServerError,
+               null,
+               "Houve um erro interno, contate o suporte"
+            );
 
             context.HttpContext.Response.StatusCode = StatusCodes.Status500InternalServerError;
 
-            context.Result = new ObjectResult("Houve um erro interno, contate o suporte");
+            context.Result = new ObjectResult(errorResponse);
         }
     }
 }
