@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using BiblioASPNet.Application.Models;
 using BiblioASPNet.Application.Requests.Authors;
+using BiblioASPNet.Application.Requests.Books;
 
 namespace BiblioASPNet.Application.Utils
 {
@@ -12,6 +13,9 @@ namespace BiblioASPNet.Application.Utils
 
             CreateMap<CreateAuthorRequest, Author>();
             CreateMap<UpdateAuthorRequest, Author>();
+
+            CreateMap<CreateBookRequest, Book>();
+            CreateMap<UpdateBookRequest, Book>();
 
         }
     }

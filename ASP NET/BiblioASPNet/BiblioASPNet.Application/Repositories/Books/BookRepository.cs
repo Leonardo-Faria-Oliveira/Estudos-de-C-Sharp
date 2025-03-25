@@ -43,5 +43,17 @@ namespace BiblioASPNet.Application.Repositories.Books
 
             return await Task.FromResult(pagination);
         }
+
+        public override async Task<Book> GetByIdAsync(Guid id)
+        {
+
+            var result = await _context.Set<Book>().AsQueryable()
+                .Include(book => book.Author)
+                .FirstAsync(t => t.Id == id);
+                
+
+            return await Task.FromResult(result);
+
+        }
     }
 }

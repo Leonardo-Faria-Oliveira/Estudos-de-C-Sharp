@@ -5,7 +5,9 @@
 
         public string Title { get; set; } = string.Empty;
 
-        public required Author Author { get; set; }
+        public Guid AuthorId { get; set; }
+
+        public Author Author { get; set; } = default!;
 
     }
 }

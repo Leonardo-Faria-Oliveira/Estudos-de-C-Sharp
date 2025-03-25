@@ -6,6 +6,8 @@ namespace BiblioASPNet.Application.Data.Context
 {
     public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options)
     {
+        
+        
 
         public DbSet<Author> Authors { get; set; }
 
