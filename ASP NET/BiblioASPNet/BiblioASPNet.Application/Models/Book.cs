@@ -5,7 +5,7 @@
 
         public string Title { get; set; } = string.Empty;
 
-        public Author Author { get; set; }
+        public required Author Author { get; set; }
 
     }
 }

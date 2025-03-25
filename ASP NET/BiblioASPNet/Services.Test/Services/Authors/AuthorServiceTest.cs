@@ -1,7 +1,6 @@
 ﻿using BiblioASPNet.Application.Exceptions;
 using BiblioASPNet.Application.Models;
 using BiblioASPNet.Application.Services.Authors;
-using Microsoft.EntityFrameworkCore.ChangeTracking;
 using TestUtils.Mapper;
 using TestUtils.Repository;
 using TestUtils.Request.Authors;

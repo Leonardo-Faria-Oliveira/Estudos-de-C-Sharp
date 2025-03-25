@@ -2,6 +2,7 @@ using BiblioASPNet.Application.Controllers.Authors;
 using BiblioASPNet.Application.Data.Context;
 using BiblioASPNet.Application.Filters;
 using BiblioASPNet.Application.Repositories.Authors;
+using BiblioASPNet.Application.Repositories.Books;
 using BiblioASPNet.Application.Requests.Authors;
 using BiblioASPNet.Application.Responses;
 using BiblioASPNet.Application.Services;
@@ -23,6 +24,9 @@ builder.Services.AddScoped<IAuthorRepository, AuthorRepository>();
 builder.Services.AddScoped<IAuthorService, AuthorService>();
 builder.Services.AddScoped<IAuthorController, AuthorController>();
 builder.Services.AddScoped<IService<ServiceResponse, CreateAuthorRequest, UpdateAuthorRequest>, AuthorService>();
+
+builder.Services.AddScoped<IBookRepository, BookRepository>();
+
 
 builder.Services.AddMvc(options => options.Filters.Add(typeof(ExceptionFilter)));
 

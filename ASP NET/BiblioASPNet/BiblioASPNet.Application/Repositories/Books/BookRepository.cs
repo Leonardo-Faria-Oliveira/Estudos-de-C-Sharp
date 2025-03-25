@@ -3,20 +3,18 @@ using BiblioASPNet.Application.Models;
 using BiblioASPNet.Application.Utils;
 using Microsoft.EntityFrameworkCore;
 
-namespace BiblioASPNet.Application.Repositories.Authors
+namespace BiblioASPNet.Application.Repositories.Books
 {
-    public class AuthorRepository(AppDbContext _context) : BaseRepository<Author>(_context), IAuthorRepository
+    public class BookRepository(AppDbContext _context) : BaseRepository<Book>(_context), IBookRepository
     {
-
-
-        public override async Task<Pagination<Author>> ListAsync(int skip, int take, string search)
+        public override async Task<Pagination<Book>> ListAsync(int skip, int take, string search)
         {
-            var query = _context.Set<Author>().AsQueryable();
+            var query = _context.Set<Book>().AsQueryable();
 
 
             if (!string.IsNullOrEmpty(search))
             {
-                query = query.Where(t => t.Name.Contains(search));
+                query = query.Where(t => t.Title.Contains(search));
             }
 
             if (skip > 0)
@@ -33,9 +31,9 @@ namespace BiblioASPNet.Application.Repositories.Authors
 
             int total = await query.CountAsync();
 
-            ICollection<Author> result = await query.ToListAsync();
+            ICollection<Book> result = await query.ToListAsync();
 
-            var pagination = new Pagination<Author>
+            var pagination = new Pagination<Book>
             {
                 Skip = skip,
                 Take = take,
@@ -45,7 +43,5 @@ namespace BiblioASPNet.Application.Repositories.Authors
 
             return await Task.FromResult(pagination);
         }
-
     }
-
 }
