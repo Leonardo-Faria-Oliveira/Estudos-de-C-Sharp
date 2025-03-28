@@ -8,11 +8,11 @@ namespace BiblioASPNet.Application.Controllers.Books
     [ApiController]
     [Route("api/[controller]")]
     public class BookController : 
-        BaseController<ServiceResponse, CreateBookRequest, UpdateBookRequest>,
+        BaseController<CreateBookRequest, UpdateBookRequest>,
         IBookController
     {
 
-        public BookController(IService<ServiceResponse, CreateBookRequest, UpdateBookRequest> _service) : base(_service)
+        public BookController(IService<CreateBookRequest, UpdateBookRequest> _service) : base(_service)
         {
             
         }

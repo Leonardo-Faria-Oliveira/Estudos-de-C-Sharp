@@ -1,20 +1,21 @@
 ﻿using BiblioASPNet.Application.Requests;
+using BiblioASPNet.Application.Responses;
 
 namespace BiblioASPNet.Application.Services
 {
-    public interface IService<S, J, K>
+    public interface IService<J, K>
         where J : BaseRequest
         where K : BaseRequest
     {
-        public Task<S> ListAsync(int take, int skip, string? search);
+        public Task<ServiceResponse> ListAsync(int take, int skip, string? search);
 
-        public Task<S> GetByIdAsync(Guid id);
+        public Task<ServiceResponse> GetByIdAsync(Guid id);
 
-        public Task<S> CreateAsync(J entity);
+        public Task<ServiceResponse> CreateAsync(J entity);
 
-        public Task<S> UpdateAsync(Guid id, K entity);
+        public Task<ServiceResponse> UpdateAsync(Guid id, K entity);
 
-        public Task<S> DeleteAsync(Guid id);
+        public Task<ServiceResponse> DeleteAsync(Guid id);
 
     }
 }

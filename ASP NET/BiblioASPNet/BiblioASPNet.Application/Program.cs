@@ -6,7 +6,6 @@ using BiblioASPNet.Application.Repositories.Authors;
 using BiblioASPNet.Application.Repositories.Books;
 using BiblioASPNet.Application.Requests.Authors;
 using BiblioASPNet.Application.Requests.Books;
-using BiblioASPNet.Application.Responses;
 using BiblioASPNet.Application.Services;
 using BiblioASPNet.Application.Services.Authors;
 using BiblioASPNet.Application.Services.Books;
@@ -26,15 +25,15 @@ options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")
 builder.Services.AddScoped<IAuthorRepository, AuthorRepository>();
 builder.Services.AddScoped<IAuthorService, AuthorService>();
 builder.Services.AddScoped<IAuthorController, AuthorController>();
-builder.Services.AddScoped<IService<ServiceResponse, CreateAuthorRequest, UpdateAuthorRequest>, AuthorService>();
+builder.Services.AddScoped<IService<CreateAuthorRequest, UpdateAuthorRequest>, AuthorService>();
 
 builder.Services.AddScoped<IBookRepository, BookRepository>();
 builder.Services.AddScoped<IBookService, BookService>();
 builder.Services.AddScoped<IBookController, BookController>();
-builder.Services.AddScoped<IService<ServiceResponse, CreateBookRequest, UpdateBookRequest>, BookService>();
+builder.Services.AddScoped<IService<CreateBookRequest, UpdateBookRequest>, BookService>();
 
 
-//builder.Services.AddMvc(options => options.Filters.Add(typeof(ExceptionFilter)));
+builder.Services.AddMvc(options => options.Filters.Add(typeof(ExceptionFilter)));
 
 builder.Services.AddAutoMapper(typeof(AutoMapperConfig));
 

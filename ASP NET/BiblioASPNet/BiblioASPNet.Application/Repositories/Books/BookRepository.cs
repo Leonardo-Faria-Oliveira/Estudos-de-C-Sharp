@@ -31,7 +31,16 @@ namespace BiblioASPNet.Application.Repositories.Books
 
             int total = await query.CountAsync();
 
-            ICollection<Book> result = await query.ToListAsync();
+            ICollection<Book> result = await query
+                .Select(book => new Book
+                {
+                    Title = book.Title,
+                    CreatedAt = book.CreatedAt,
+                    Id = book.Id,
+                    UpdatedAt = book.UpdatedAt,
+                    AuthorId = book.AuthorId,
+                })
+                .ToListAsync();
 
             var pagination = new Pagination<Book>
             {

@@ -8,7 +8,7 @@ using BiblioASPNet.Application.Utils.Validators;
 
 namespace BiblioASPNet.Application.Services
 {
-    public abstract class BaseService<T, J, K> : IService<ServiceResponse, J, K>
+    public abstract class BaseService<T, J, K, L, M> : IService<J, K>
         where J : BaseRequest
         where K : BaseRequest
         where T : BaseModel
@@ -34,11 +34,13 @@ namespace BiblioASPNet.Application.Services
 
             await _repository.CreateAsync(obj);
 
+            var res = _mapper.Map<L>(obj);
+
             return await Task.FromResult(
                 new ServiceResponse(
                     System.Net.HttpStatusCode.OK,
-                    "Sucesso, cadastrado com sucesso!",
-                    entity
+                    ["Sucesso, cadastrado com sucesso!"],
+                    res
                 )
             );
 
@@ -53,7 +55,7 @@ namespace BiblioASPNet.Application.Services
                 return await Task.FromResult(
                     new ServiceResponse(
                         System.Net.HttpStatusCode.NotFound,
-                        "Erro, não encontrado",
+                        ["Erro, não encontrado"],
                         null
                     )
                 );
@@ -66,7 +68,7 @@ namespace BiblioASPNet.Application.Services
                 return await Task.FromResult(
                     new ServiceResponse(
                         System.Net.HttpStatusCode.OK,
-                        "Sucesso, excluído com sucesso!",
+                        ["Sucesso, excluído com sucesso!"],
                         null
                     )
                 );
@@ -75,7 +77,7 @@ namespace BiblioASPNet.Application.Services
             return await Task.FromResult(
                 new ServiceResponse(
                     System.Net.HttpStatusCode.BadRequest,
-                    "Houve um ero, não foi possível excluir, tente novamente",
+                    ["Houve um ero, não foi possível excluir, tente novamente"],
                     null
                 )
             );
@@ -90,17 +92,19 @@ namespace BiblioASPNet.Application.Services
                 return await Task.FromResult(
                     new ServiceResponse(
                         System.Net.HttpStatusCode.NotFound,
-                        "Erro, não encontrado",
+                        ["Erro, não encontrado"],
                         null
                     )
                 );
             }
 
+            var res = _mapper.Map<M>(entity);
+
             return await Task.FromResult(
                 new ServiceResponse(
                     System.Net.HttpStatusCode.OK,
-                    "Sucesso!",
-                    entity
+                    ["Sucesso!"],
+                    res
                 )
             );
         }
@@ -109,11 +113,22 @@ namespace BiblioASPNet.Application.Services
         {
             var result = await _repository.ListAsync(take, skip, search);
 
+            var mappedContent = result.Content.Select( x => _mapper.Map<L>(x));
+
+            var res = new
+            {
+                result.Take,
+                result.Skip,
+                result.Total,
+                Content = mappedContent
+
+            };
+
             return await Task.FromResult(
                 new ServiceResponse(
                     System.Net.HttpStatusCode.OK,
-                    "Sucesso!",
-                    result
+                    ["Sucesso!"],
+                    res
                 )
             );
 
@@ -128,7 +143,7 @@ namespace BiblioASPNet.Application.Services
                 return await Task.FromResult(
                     new ServiceResponse(
                         System.Net.HttpStatusCode.NotFound,
-                        "Erro, não encontrado",
+                        ["Erro, não encontrado"],
                         null
                     )
                 );
@@ -140,11 +155,13 @@ namespace BiblioASPNet.Application.Services
 
             var res = await _repository.UpdateAsync(obj);
 
+            var mappedRes = _mapper.Map<L>(res);
+
             return await Task.FromResult(
                 new ServiceResponse(
                     System.Net.HttpStatusCode.OK,
-                    "Alterado com sucesso",
-                    res
+                    ["Alterado com sucesso"],
+                    mappedRes
                 )
             );
         }

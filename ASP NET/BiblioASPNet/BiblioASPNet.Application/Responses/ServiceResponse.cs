@@ -6,7 +6,7 @@ namespace BiblioASPNet.Application.Responses
 
         HttpStatusCode StatusCode,
 
-        string? Message,
+        ICollection<string>? Message,
 
         object? Content
 

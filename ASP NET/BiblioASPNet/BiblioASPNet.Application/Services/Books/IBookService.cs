@@ -3,5 +3,5 @@ using BiblioASPNet.Application.Responses;
 
 namespace BiblioASPNet.Application.Services.Books
 {
-    public interface IBookService : IService<ServiceResponse, CreateBookRequest, UpdateBookRequest>;
+    public interface IBookService : IService<CreateBookRequest, UpdateBookRequest>;
 }

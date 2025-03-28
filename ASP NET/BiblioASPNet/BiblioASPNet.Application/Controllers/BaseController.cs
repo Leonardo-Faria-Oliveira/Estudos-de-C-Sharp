@@ -8,15 +8,14 @@ using System.Net;
 namespace BiblioASPNet.Application.Controllers
 {
 
-    public abstract class BaseController<S, J, K> : ControllerBase, IController<J, K>
-        where S : ServiceResponse
+    public abstract class BaseController<J, K> : ControllerBase, IController<J, K>
         where J : BaseRequest
         where K : BaseRequest
     {
 
-        private readonly IService<S, J, K> _service;
+        private readonly IService<J, K> _service;
 
-        protected BaseController(IService<S, J, K> service)
+        protected BaseController(IService<J, K> service)
         {
             _service = service;
         }

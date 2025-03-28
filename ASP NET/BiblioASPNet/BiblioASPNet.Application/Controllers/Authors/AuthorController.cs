@@ -7,9 +7,9 @@ namespace BiblioASPNet.Application.Controllers.Authors
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class AuthorController : BaseController<ServiceResponse, CreateAuthorRequest, UpdateAuthorRequest>, IAuthorController
+    public class AuthorController : BaseController<CreateAuthorRequest, UpdateAuthorRequest>, IAuthorController
     {
-        public AuthorController(IService<ServiceResponse, CreateAuthorRequest, UpdateAuthorRequest> service) : base(service)
+        public AuthorController(IService<CreateAuthorRequest, UpdateAuthorRequest> service) : base(service)
         {
         }
     }

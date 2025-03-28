@@ -6,11 +6,12 @@ using BiblioASPNet.Application.Repositories.Authors;
 using BiblioASPNet.Application.Repositories.Books;
 using BiblioASPNet.Application.Requests.Books;
 using BiblioASPNet.Application.Responses;
+using BiblioASPNet.Application.Responses.Dtos.Books;
 using BiblioASPNet.Application.Utils.Validators;
 
 namespace BiblioASPNet.Application.Services.Books
 {
-    public class BookService : BaseService<Book, CreateBookRequest, UpdateBookRequest>, IBookService
+    public class BookService : BaseService<Book, CreateBookRequest, UpdateBookRequest, ShortBookDto, BookDetailsDto>, IBookService
     {
 
         private readonly IBookRepository _repository;
@@ -34,18 +35,20 @@ namespace BiblioASPNet.Application.Services.Books
 
             if(author == null)
             {
-                throw new Exception("Autor não existe");
+                throw new AuthorNotFoundException(["Autor não existe"]);
             }
 
             obj.Author = author;
 
             await _repository.CreateAsync(obj);
 
+            var book = _mapper.Map<ShortBookDto>(obj);
+
             return await Task.FromResult(
                 new ServiceResponse(
                     System.Net.HttpStatusCode.OK,
-                    "Sucesso, cadastrado com sucesso!",
-                    obj
+                    ["Sucesso, cadastrado com sucesso!"],
+                    book
                 )
             );
 

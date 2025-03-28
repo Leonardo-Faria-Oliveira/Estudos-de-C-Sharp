@@ -10,7 +10,7 @@ namespace BiblioASPNet.Application.Repositories
 
         public Task<Pagination<T>> ListAsync(int skip, int take, string search);
 
-        public Task<T> GetByIdAsync(Guid id);
+        public Task<T?> GetByIdAsync(Guid id);
 
         public Task<T> UpdateAsync(T entity);
 

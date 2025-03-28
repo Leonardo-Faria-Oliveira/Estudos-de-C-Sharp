@@ -18,8 +18,8 @@ namespace BiblioASPNet.Application.Filters
                 var errorResponse = new ServiceResponse
                 (
                    (HttpStatusCode)exception.StatusCode,
-                   null,
-                   exception.GetErrors()
+                   exception.GetErrors(),
+                   null
                 );
                 context.HttpContext.Response.StatusCode = exception.StatusCode;
                 context.Result = new ObjectResult(errorResponse);

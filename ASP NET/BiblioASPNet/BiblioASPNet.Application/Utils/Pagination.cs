@@ -2,7 +2,7 @@
 
 namespace BiblioASPNet.Application.Utils
 {
-    public class Pagination<T> where T : BaseModel
+    public class Pagination<L>
     {
 
         public int Skip { get; set; }
@@ -11,7 +11,7 @@ namespace BiblioASPNet.Application.Utils
 
         public int Take { get; set; }
 
-        public ICollection<T> Content { get; set; }
+        public ICollection<L> Content { get; set; }
 
     }
 }

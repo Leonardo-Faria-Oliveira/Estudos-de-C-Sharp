@@ -32,10 +32,10 @@ namespace BiblioASPNet.Application.Repositories
             return await Task.FromResult(true);
         }
 
-        public virtual async Task<T> GetByIdAsync(Guid id)
+        public virtual async Task<T?> GetByIdAsync(Guid id)
         {
 
-            var result = await _context.Set<T>().AsQueryable().FirstAsync(t => t.Id == id);
+            var result = await _context.Set<T>().AsQueryable().FirstOrDefaultAsync(t => t.Id == id);
 
             return await Task.FromResult(result);
 
