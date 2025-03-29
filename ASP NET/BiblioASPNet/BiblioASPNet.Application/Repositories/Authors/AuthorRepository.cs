@@ -9,7 +9,7 @@ namespace BiblioASPNet.Application.Repositories.Authors
     {
 
 
-        public override async Task<Pagination<Author>> ListAsync(int skip, int take, string search)
+        public override async Task<Pagination<Author>> ListAsync(int take, int skip, string search)
         {
             var query = _context.Set<Author>().AsQueryable();
 

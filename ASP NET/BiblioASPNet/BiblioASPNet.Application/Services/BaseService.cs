@@ -113,7 +113,7 @@ namespace BiblioASPNet.Application.Services
         {
             var result = await _repository.ListAsync(take, skip, search);
 
-            var mappedContent = result.Content.Select( x => _mapper.Map<L>(x));
+            var mappedContent = result.Content.Select( x => _mapper.Map<L>(x)).ToList();
 
             var res = new
             {

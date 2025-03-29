@@ -15,13 +15,13 @@ namespace BiblioASPNet.Application.Utils
 
             CreateMap<CreateAuthorRequest, Author>();
             CreateMap<UpdateAuthorRequest, Author>();
-            CreateMap<Author, ShortAuthorDto>();
-            CreateMap<Author, AuthorDetailsDto>();
+            CreateMap<Author, ShortAuthorDto>().ReverseMap();
+            CreateMap<Author, AuthorDetailsDto>().ReverseMap();
 
             CreateMap<CreateBookRequest, Book>();
             CreateMap<UpdateBookRequest, Book>();
-            CreateMap<Book, ShortBookDto>();
-            CreateMap<Book, BookDetailsDto>();
+            CreateMap<Book, ShortBookDto>().ReverseMap();
+            CreateMap<Book, BookDetailsDto>().ReverseMap();
 
         }
     }
