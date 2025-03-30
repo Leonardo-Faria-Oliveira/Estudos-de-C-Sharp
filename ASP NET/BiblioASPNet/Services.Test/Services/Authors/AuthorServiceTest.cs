@@ -1,14 +1,11 @@
-﻿using AutoMapper;
-using BiblioASPNet.Application.Exceptions;
+﻿using BiblioASPNet.Application.Exceptions;
 using BiblioASPNet.Application.Models;
 using BiblioASPNet.Application.Responses.Dtos.Authors;
 using BiblioASPNet.Application.Services.Authors;
-using BiblioASPNet.Application.Utils;
 using System.Net;
 using TestUtils.Mapper;
 using TestUtils.Repository;
 using TestUtils.Request.Authors;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace Unit.Test.Services.Authors
 {
@@ -187,11 +184,10 @@ namespace Unit.Test.Services.Authors
 
         }
 
-        [Theory]
-        [InlineData("a7a1cc3c-fc68-4374-9f8d-62e8de677029")]
-        public async Task ShouldNotBeAbleToReturnAnAuthorWithAInvalidId(string stringUid)
+        [Fact]
+        public async Task ShouldNotBeAbleToReturnAnAuthorWithAnInvalidId()
         {
-            var uid = Guid.Parse(stringUid);
+            var uid = Guid.Parse("a7a1cc3c-fc68-4374-9f8d-62e8de677029");
 
             //Arrange
             var service = GetAuthorService();
@@ -205,6 +201,124 @@ namespace Unit.Test.Services.Authors
 
         }
 
+        [Fact]
+        public async Task ShouldBePossibleToUpdateAnAuthor()
+        {
+            var uid = Guid.NewGuid();
+            authorList[0] = new Author
+            {
+                Id = uid,
+            };
+
+            //Arrange
+            var service = GetAuthorService();
+            var request = UpdateAuthorRequestBuilder.Build();
+            var mapper = AutoMapperBuilder.Build();
+
+            var response = await service.UpdateAsync(uid, request);
+
+            var shortAuthor = mapper.Map<ShortAuthorDto>(authorList[0]);
+
+            Assert.Equal(shortAuthor, response.Content);
+
+        }
+
+        [Fact]
+        public async Task ShouldNotBePossibleToUpdateAnAuthorWithAnInvalidId()
+        {
+            var uid = Guid.Parse("a7a1cc3c-fc68-4374-9f8d-62e8de677029");
+            
+
+            //Arrange
+            var service = GetAuthorService();
+            var request = UpdateAuthorRequestBuilder.Build();
+            var mapper = AutoMapperBuilder.Build();
+
+            var response = await service.UpdateAsync(uid, request);
+
+            Assert.Null(response.Content);
+            Assert.Equal(HttpStatusCode.NotFound, response.StatusCode);
+            Assert.Equal("Erro, não encontrado", response.Message!.First());
+
+        }
+
+        [Theory]
+        [InlineData(null)]
+        [InlineData("")]
+        [InlineData(" ")]
+        public async Task ShouldNotBePossibleToUpdateAnAuthorWithoutAName(string name)
+        {
+            var uid = Guid.NewGuid();
+            authorList[0] = new Author
+            {
+                Id = uid,
+            };
+
+            //Arrange
+            var service = GetAuthorService();
+            var request = UpdateAuthorRequestBuilder.Build("name", name);
+
+            //Assert
+            var exception = await Assert.ThrowsAsync<ValidationErrorException>(() => service.UpdateAsync(uid, request));
+            Assert.Equal("O campo Name não pode ser nulo ou vazio.", exception.GetErrors().First());
+        }
+
+        [Fact]
+        public async Task ShouldNotBePossibleToUpdateAnAuthorWithANameWithLessThan3Caracthers()
+        {
+            var uid = Guid.NewGuid();
+            authorList[0] = new Author
+            {
+                Id = uid,
+            };
+
+            //Arrange
+            var service = GetAuthorService();
+            var request = UpdateAuthorRequestBuilder.Build("name", "12");
+
+            //Assert
+            var exception = await Assert.ThrowsAsync<ValidationErrorException>(() => service.UpdateAsync(uid, request));
+            Assert.Equal("O campo Name não pode possuir menos de 3 caracteres.", exception.GetErrors().First());
+        }
+
+
+
+        [Fact]
+        public async Task ShouldBePossibleToDeleteAnAuthor()
+        {
+            var uid = Guid.NewGuid();
+            authorList[0] = new Author
+            {
+                Id = uid,
+            };
+
+            //Arrange
+            var service = GetAuthorService();
+
+            var response = await service.DeleteAsync(uid);
+
+            Assert.Equal(2, authorList.Count);
+            Assert.Equal("Sucesso, excluído com sucesso!", response.Message.First());
+
+        }
+
+        [Fact]
+        public async Task ShouldNotBePossibleToDeleteAnAuthorWithAnInvalidId()
+        {
+            var uid = Guid.Parse("a7a1cc3c-fc68-4374-9f8d-62e8de677029");
+
+            //Arrange
+            var service = GetAuthorService();
+
+            var response = await service.DeleteAsync(uid);
+
+            Assert.Null(response.Content);
+            Assert.Equal(HttpStatusCode.NotFound, response.StatusCode);
+            Assert.Equal("Erro, não encontrado", response.Message!.First());
+        }
+
+
+
         private AuthorService GetAuthorService()
         {
             var mapper = AutoMapperBuilder.Build();
@@ -213,6 +327,8 @@ namespace Unit.Test.Services.Authors
             .WithCreateAsync(authorList.First())
             .WithListAsync(authorList)
             .WithGetByIdAsync(authorList)
+            .WithUpdateAsync(authorList.First())
+            .WithDeleteAsync(authorList)
             .Build();
 
             return new AuthorService(authorRepository, mapper);

@@ -74,7 +74,33 @@ namespace TestUtils.Repository
                 
             return this;
         }
-        
+
+
+        public AuthorRepositoryBuilder WithUpdateAsync(Author author)
+        {
+            _repository
+                .Setup(repo => repo.UpdateAsync(It.IsAny<Author>()))
+                .ReturnsAsync(author);
+
+            return this;
+        }
+
+        public AuthorRepositoryBuilder WithDeleteAsync(List<Author> authors)
+        {
+            _repository
+                .Setup(repo => repo.DeleteAsync(It.IsAny<Author>()))
+                .Returns((Author author) =>
+                {
+            
+                    authors.Remove(author);
+
+                    return Task.FromResult(true);
+
+                });
+
+            return this;
+        }
+
         public IAuthorRepository Build()
         {
             return _repository.Object;

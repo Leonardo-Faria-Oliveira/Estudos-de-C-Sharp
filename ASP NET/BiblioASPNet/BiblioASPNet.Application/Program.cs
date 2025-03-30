@@ -33,7 +33,7 @@ builder.Services.AddScoped<IBookController, BookController>();
 builder.Services.AddScoped<IService<CreateBookRequest, UpdateBookRequest>, BookService>();
 
 
-builder.Services.AddMvc(options => options.Filters.Add(typeof(ExceptionFilter)));
+//builder.Services.AddMvc(options => options.Filters.Add(typeof(ExceptionFilter)));
 
 builder.Services.AddAutoMapper(typeof(AutoMapperConfig));
 

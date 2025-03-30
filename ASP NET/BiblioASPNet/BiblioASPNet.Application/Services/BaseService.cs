@@ -149,9 +149,11 @@ namespace BiblioASPNet.Application.Services
                 );
             }
 
-            var parsedEntity = _mapper.Map<T>(obj);
+            var jRequest = _mapper.Map<J>(entity);
 
-            obj = parsedEntity;
+            Validate(jRequest);
+
+             _mapper.Map(entity, obj);
 
             var res = await _repository.UpdateAsync(obj);
 
