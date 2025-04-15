@@ -2,6 +2,7 @@
 using System.Runtime.Serialization;
 using BiblioASPNet.Application.Utils.Attributes;
 using System.Runtime.InteropServices;
+using Newtonsoft.Json.Serialization;
 
 namespace BiblioASPNet.Application.Requests.Authors
 {

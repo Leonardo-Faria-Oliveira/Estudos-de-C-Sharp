@@ -18,9 +18,22 @@ var builder = WebApplication.CreateBuilder(args);
 
 
 
-builder.Services.AddDbContext<AppDbContext>(options =>
-options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+var environment = builder.Configuration.GetValue<string>("Environment");
 
+if (environment == "Dev")
+{
+    builder.Services.AddDbContext<AppDbContext>(options =>
+        options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+}
+else if (environment == "Test")
+{
+    var provider = builder.Services.AddEntityFrameworkInMemoryDatabase().BuildServiceProvider();
+    builder.Services.AddDbContext<AppDbContext>(config =>
+    {
+        config.UseInMemoryDatabase("InMemoryDbTest");
+        config.UseInternalServiceProvider(provider);
+    });
+}
 
 builder.Services.AddScoped<IAuthorRepository, AuthorRepository>();
 builder.Services.AddScoped<IAuthorService, AuthorService>();
@@ -33,7 +46,7 @@ builder.Services.AddScoped<IBookController, BookController>();
 builder.Services.AddScoped<IService<CreateBookRequest, UpdateBookRequest>, BookService>();
 
 
-//builder.Services.AddMvc(options => options.Filters.Add(typeof(ExceptionFilter)));
+builder.Services.AddMvc(options => options.Filters.Add(typeof(ExceptionFilter)));
 
 builder.Services.AddAutoMapper(typeof(AutoMapperConfig));
 
@@ -61,3 +74,8 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+public partial class Main()
+{
+
+}
