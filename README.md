@@ -5,6 +5,8 @@
  - Repository Pattern: Petfolio
  - Escopos de injeção de dependências no .NET: Scopes
  - Repository Pattern e camada de Serviço genericos: BiblioASPNet
- - Divisão eficiente de domínios (DDD): MoneyControl (foi criado fora do repositorio)
+ - Divisão eficiente de domínios (DDD): MoneyControl (foi criado fora do repositorio) e CQRS/Tasks
+ - Autenticação e autorização: MoneyControl (foi criado fora do repositorio)
+ - Testes automatizados: MoneyControl (foi criado fora do repositorio)
  - Design Patterns: Mediator e Design Patterns
- - CQRS: CQRSStudy e CQRS/Project1
+ - CQRS: CQRSStudy, CQRS/Project1
