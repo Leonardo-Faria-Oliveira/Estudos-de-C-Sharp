@@ -1,4 +1,4 @@
-﻿using Domain.Adapters.Request;
+﻿using Domain.Adapters.Requests;
 
 namespace Domain.Utils
 {

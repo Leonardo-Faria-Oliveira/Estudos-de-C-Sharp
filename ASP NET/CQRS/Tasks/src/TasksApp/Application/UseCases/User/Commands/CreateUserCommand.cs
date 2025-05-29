@@ -1,11 +1,12 @@
 ﻿using Application.UseCases.User.ViewModels;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
-using Domain.Adapters.Request;
+using Domain.Adapters.Requests;
+using Domain.Adapters.Responses;
 
 namespace Application.UseCases.User.Commands
 {
-    public record CreateUserCommand : IRequest<UserInfoViewModel>
+    public record CreateUserCommand : IRequest<BaseResponse<UserInfoViewModel>>
     {
 
         public string Name { get; set; } = string.Empty;

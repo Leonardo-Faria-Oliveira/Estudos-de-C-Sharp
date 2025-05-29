@@ -1,5 +1,5 @@
 ﻿using Dapper;
-using Domain.Adapters.Request.User;
+using Domain.Adapters.Requests.User;
 using Domain.Repositories.User;
 
 namespace Infrastructure.Persistence.SQLServer.Repositories
@@ -19,15 +19,17 @@ namespace Infrastructure.Persistence.SQLServer.Repositories
                 VALUES (@Id, @Name, @Surname, @Email, @PasswordHash, @Username, @IsActive, @UpdatedAt, @CreatedAt, @RefreshToken, @Expiration);
             ";
 
+            var id = Guid.NewGuid();
+
             await connection.ExecuteAsync(sql, new
             {
-                Id = new Guid(),
-                Name = user.Name,
-                Surname = user.Surname,
-                Email = user.Email,
-                PasswordHash = user.PasswordHash,
-                Username = user.Username,
-                IsActive = user.IsActive,
+                Id = id,
+                user.Name,
+                user.Surname,
+                user.Email,
+                user.PasswordHash,
+                user.Username,
+                user.IsActive,
                 UpdatedAt = DateTimeOffset.Now,
                 CreatedAt = DateTimeOffset.Now,
                 RefreshToken = "",

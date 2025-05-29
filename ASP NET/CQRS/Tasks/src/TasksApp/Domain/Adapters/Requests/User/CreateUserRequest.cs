@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
-namespace Domain.Adapters.Request.User
+namespace Domain.Adapters.Requests.User
 {
     public record CreateUserRequest(
         string Name,

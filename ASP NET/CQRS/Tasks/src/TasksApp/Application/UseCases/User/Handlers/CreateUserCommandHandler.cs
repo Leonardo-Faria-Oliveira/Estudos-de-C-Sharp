@@ -1,12 +1,14 @@
 ﻿using Application.UseCases.User.Commands;
 using Application.UseCases.User.ViewModels;
-using Domain.Adapters.Request;
+using Domain.Adapters.Requests;
+using Domain.Adapters.Requests.User;
+using Domain.Adapters.Responses;
 using Domain.Repositories.User;
-using Domain.Requests.User;
+using System.Net;
 
 namespace Application.UseCases.User.Handlers
 {
-    public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, UserInfoViewModel>
+    public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, BaseResponse<UserInfoViewModel>>
     {
 
         private readonly IUserWriteRepository _writeRepository;
@@ -16,7 +18,7 @@ namespace Application.UseCases.User.Handlers
             _writeRepository = writeRepository;
         }
 
-        public async Task<UserInfoViewModel> Handle(CreateUserCommand request, CancellationToken cancellationToken)
+        public async Task<BaseResponse<UserInfoViewModel>> Handle(CreateUserCommand request, CancellationToken cancellationToken)
         {
             var user = new CreateUserRequest(
                 request.Name,
@@ -29,8 +31,20 @@ namespace Application.UseCases.User.Handlers
               
             await _writeRepository.CreateUser(user);
 
-            return new UserInfoViewModel();
+            return new BaseResponse<UserInfoViewModel>(
+                new ResponseInfo(
+                    "Usuário Cadastrado com sucesso!",
+                    null,
+                    (int)HttpStatusCode.OK
+                ),
+                new UserInfoViewModel(
+                    user.Name,
+                    user.Surname,
+                    user.Email
+                )
+            );
 
         }
+
     }
 }

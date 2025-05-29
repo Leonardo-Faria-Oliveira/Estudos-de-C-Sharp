@@ -1,4 +1,4 @@
-﻿using Domain.Adapters.Request.User;
+﻿using Domain.Adapters.Requests.User;
 using Domain.Entities;
 
 namespace Domain.Repositories.User

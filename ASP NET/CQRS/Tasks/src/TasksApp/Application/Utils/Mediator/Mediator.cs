@@ -1,6 +1,6 @@
 ﻿using Application.UseCases.User.Commands;
 using Application.UseCases.User.Handlers;
-using Domain.Adapters.Request;
+using Domain.Adapters.Requests;
 using Domain.Utils;
 using Microsoft.Extensions.DependencyInjection;
 

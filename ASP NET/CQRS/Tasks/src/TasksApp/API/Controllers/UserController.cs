@@ -1,5 +1,6 @@
 ﻿using Application.UseCases.User.Commands;
 using Application.UseCases.User.ViewModels;
+using Domain.Adapters.Responses;
 using Domain.Utils;
 using Microsoft.AspNetCore.Mvc;
 
@@ -15,7 +16,7 @@ namespace API.Controllers
         [HttpPost]
         public async Task<ActionResult<UserInfoViewModel>> CreateUser(CreateUserCommand command, CancellationToken cancellationToken)
         {
-            var result = await _mediator.Send<UserInfoViewModel>(command, cancellationToken);
+            var result = await _mediator.Send<BaseResponse<UserInfoViewModel>>(command, cancellationToken);
             return Ok(result);
         }
     }
