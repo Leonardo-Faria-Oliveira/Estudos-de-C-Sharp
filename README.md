@@ -8,5 +8,6 @@
  - Divisão eficiente de domínios (DDD): MoneyControl (foi criado fora do repositorio) e CQRS/Tasks
  - Autenticação e autorização: MoneyControl (foi criado fora do repositorio)
  - Testes automatizados: MoneyControl (foi criado fora do repositorio)
- - Design Patterns: Mediator e Design Patterns
- - CQRS: CQRSStudy, CQRS/Project1
+ - Design Patterns: Mediator, Design Patterns e CQRS/Tasks
+ - CQRS: CQRSStudy, CQRS/Project1 e CQRS/Tasks
+ - Dapper: CQRS/Tasks
